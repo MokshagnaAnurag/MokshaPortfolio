@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Self-Driving Robot with RPLIDAR C1",
       description: "Engineered an autonomous navigation system leveraging ROS and Python. Integrated LiDAR-based SLAM for precise obstacle detection and implemented real-time path planning algorithms for seamless movement.",
       category: "Robotics",
-      image: "https://images.unsplash.com/photo-1580894906475-403276d3942d?auto=format&fit=crop&q=80&w=800", // Updated image for Robotics
+      image: "https://thumbs.dreamstime.com/z/self-driving-delivery-bot-travels-along-urban-path-ai-generated-autonomous-delivery-robot-navigating-city-sidewalk-dusk-313006773.jpg", // Updated image for Robotics
       tags: ["ROS", "Python", "LiDAR", "SLAM"],
       links: {
         github: "https://github.com",
@@ -37,7 +37,7 @@ const Projects = () => {
       title: "Self-Balancing Robot",
       description: "Built a two-wheeled self-balancing robot using the MPU6050 sensor for tilt detection and implemented PID control for stability. Tuned PID parameters for real-time response and smooth balancing on various surfaces.",
       category: "Robotics",
-      image: "https://images.unsplash.com/photo-1600984695792-8ca1c6042b50?auto=format&fit=crop&q=80&w=800", // Updated image for Robotics
+      image: "https://hackster.imgix.net/uploads/attachments/1460483/_ihMxXCqSaS.blob?auto=compress%2Cformat&w=900&h=675&fit=min", // Updated image for Robotics
       tags: ["Arduino", "MPU6050", "PID Control"],
       links: {
         github: "https://github.com",
@@ -48,7 +48,7 @@ const Projects = () => {
       title: "Smart Traffic Management System",
       description: "Developed an AI-powered traffic light system using Raspberry Pi and OpenCV to optimize real-time traffic flow. Implemented vehicle detection and priority-based traffic control, reducing congestion by 30%.",
       category: "IoT",
-      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&q=80&w=800", // Updated image for IoT/Traffic
+      image: "https://dvg.karnatakasmartcity.in/wp-content/uploads/2019/12/smart-city-solution-800x423.png", // Updated image for IoT/Traffic
       tags: ["IoT", "Raspberry Pi", "OpenCV"],
       links: {
         github: "https://github.com",
@@ -59,7 +59,7 @@ const Projects = () => {
       title: "Cybercrime Reporting Chatbot",
       description: "Developed intent recognition and sentiment analysis using Scikit-learn to classify user inputs and extract report insights. Launched a Gradio-based frontend to enhance accessibility and streamline crime reporting workflows.",
       category: "AI/ML",
-      image: "https://images.unsplash.com/photo-1544198998-7f0fd1a2f050?auto=format&fit=crop&q=80&w=800", // Updated image for AI/ML
+      image: "https://tse4.mm.bing.net/th/id/OIP.xnF6HHtq3PBRQpvygevRUwHaDt?rs=1&pid=ImgDetMain", // Updated image for AI/ML
       tags: ["Python", "AI", "Gradio", "NLP"],
       links: {
         github: "https://github.com/MokshagnaAnurag/Cybercrime-Reporting-Chatbot.git",
@@ -70,7 +70,7 @@ const Projects = () => {
       title: "Automatic Vehicle Number Plate Detection",
       description: "Built a real-time license plate recognition system using OpenCV, achieving over 95% detection accuracy. Optimized image preprocessing for consistent performance in varying lighting and weather conditions.",
       category: "Computer Vision",
-      image: "https://images.unsplash.com/photo-1565571183-4ab05f9b1b94?auto=format&fit=crop&q=80&w=800", // Updated image for CV
+      image: "https://tse3.mm.bing.net/th/id/OIP.W5UtlzGJMLx4cMa6s_ih7gHaEg?rs=1&pid=ImgDetMain", // Updated image for CV
       tags: ["Python", "OpenCV"],
       links: {
         github: "https://github.com/MokshagnaAnurag/anpr.raspberrypi.git",
@@ -81,23 +81,35 @@ const Projects = () => {
       title: "Phishing Link Scanner",
       description: "Developed a scanner analyzing 200+ URLs for phishing risks, integrating VirusTotal API for comprehensive security analysis. Incorporated user-friendly outputs with intuitive, color-coded feedback for enhanced usability.",
       category: "Cybersecurity",
-      image: "https://images.unsplash.com/photo-1553835787-86e89cced7e2?auto=format&fit=crop&q=80&w=800", // Updated image for Cybersecurity
+      image: "https://thumbs.dreamstime.com/b/phishing-fish-hook-computer-keyboard-computer-crime-data-theft-cyber-crime-41526513.jpg", // Updated image for Cybersecurity
       tags: ["Python", "VirusTotal API"],
       links: {
         github: "https://github.com/MokshagnaAnurag/Phishing-Link-Scanner.git",
       }
     },
-    {
-      id: 7,
-      title: "Steganography in Images using LSB",
-      description: "Implemented LSB-based steganography technique to embed and extract messages securely within images. Integrated AES encryption for added message confidentiality and used OpenCV and NumPy to maintain image fidelity while embedding hidden content.",
-      category: "Security",
-      image: "https://images.unsplash.com/photo-1593704406971-d9d4dbd1a7b4?auto=format&fit=crop&q=80&w=800", // Updated image for Security
-      tags: ["Python", "OpenCV", "LSB", "AES"],
-      links: {
-        github: "https://github.com/MokshagnaAnurag/Steganography-in-Images-LSB.git",
+      {
+        id: 7,
+        title: "Voice Gender Recognition Using MATLAB",
+        description: "Designed a voice-based gender classification system using MATLAB. Extracted features like pitch, formants, and MFCCs to train and evaluate machine learning classifiers for accurate gender prediction.",
+        category: "Signal Processing",
+        image: "https://1.bp.blogspot.com/-os0fFsNoOhY/Xfn5lQKq0JI/AAAAAAAAAdU/l9jMt7QApOEP3PufPWR_qbtddBzEDWi4gCLcBGAsYHQ/w1200-h630-p-k-no-nu/Gender%2BDetection%2Bfrom%2Bspeech.jpg",
+        tags: ["MATLAB", "MFCC", "Audio Processing", "Machine Learning"],
+        links: {
+          github: "https://github.com/MokshagnaAnurag/Voice-Gender-Recognition-Using-Matlab.git",
+        }
+      },
+      {
+        id: 8,
+        title: "Semantic Segmentation in Autonomous Vehicles",
+        description: "Implemented semantic segmentation models using deep learning to classify each pixel in driving scenes. Utilized datasets like Cityscapes and frameworks such as TensorFlow/Keras to enhance perception systems in self-driving applications.",
+        category: "Autonomous Systems",
+        image: "https://tse2.mm.bing.net/th/id/OIP.XNBjTvyLeuov7vkDFzcJFQHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain",
+        tags: ["Deep Learning", "TensorFlow", "Semantic Segmentation", "Autonomous Driving"],
+        links: {
+          github: "https://github.com/MokshagnaAnurag/SEMANTIC-SEGMENTATION-IN-AUTONOMOUS-VEHICLES.git",
+        }
       }
-    }
+      
   ];
   
   // Filter categories
