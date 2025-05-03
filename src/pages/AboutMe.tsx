@@ -32,56 +32,6 @@ const AboutMe = () => {
     };
   }, []);
 
-  const skills = [
-    {
-      category: "Internet of Things",
-      items: [
-        "IoT Architecture Design",
-        "MQTT & CoAP Protocols",
-        "ThingSpeak, Google Firebase",
-        "Wireless Sensor Networks",
-      ],
-      icon: <Smartphone size={24} className="text-tech-iot" />
-    },
-    {
-      category: "Embedded Systems",
-      items: [,
-        "RTOS",
-        "Microcontrollers",,
-        "Hardware Interfaces (I2C, UART)"
-      ],
-      icon: <Cpu size={24} className="text-tech-embedded" />
-    },
-    {
-      category: "Robotics",
-      items: [
-        "ROS (Robot Operating System)",
-        "Autonomous Navigation",
-        "Computer Vision",
-        "Sensor Fusion",
-        "Motion Planning & Control"
-      ],
-      icon: <Bot size={24} className="text-tech-robotics" />
-    },
-    {
-      category: "AI & Machine Learning",
-      items: [
-        "TensorFlow & PyTorch",
-        "Neural Networks",
-        "Computer Vision",
-      ],
-      icon: <Database size={24} className="text-tech-ai" />
-    },
-    {
-      category: "Cybersecurity",
-      items: [
-        "Web Application Penetration Testing",
-        "Network Security"
-      ],
-      icon: <Lock size={24} className="text-tech-cybersec" />
-    }
-  ];
-
   const socialLinks = [
     {
       name: "LinkedIn",
@@ -143,46 +93,16 @@ const AboutMe = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
                 <div className="text-muted-foreground space-y-4">
-                  <p>I’m <strong>Kankati Mokshagna Anurag</strong>, a passionate and driven Electronics and Communication Engineering student at <strong>MVGR College of Engineering</strong>, graduating in <strong>2026</strong>. With a strong foundation in <strong>Cybersecurity, IoT, and Embedded Systems</strong>, I’m constantly exploring how these domains intersect with real-world applications — from <strong>autonomous vehicle technologies</strong> to <strong>space exploration</strong>.</p>
+                <p>I’m <strong>Kankati Mokshagna Anurag</strong>, a passionate and driven Electronics and Communication Engineering student at <strong>MVGR College of Engineering</strong>, graduating in <strong>2026</strong>. With a strong foundation in <strong>Cybersecurity, IoT, and Embedded Systems</strong>, I’m constantly exploring how these domains intersect with real-world applications — from <strong>autonomous vehicle technologies</strong> to <strong>space exploration</strong>.</p>
 
 <p>My work spans across diverse technical areas, including <strong>penetration testing</strong>, <strong>exploit development</strong>, <strong>embedded system design</strong>, and <strong>AI/ML integration</strong>. I’ve built projects like <em>vehicle number plate detection using Python and OpenCV</em>, <em>Boston house price prediction using Gradient Boosting</em>, and contributed to open-source initiatives like <strong>GirlScript Summer of Code</strong> and <strong>Swecha Andhra Pradesh</strong>. I actively participate in <strong>hackathons</strong>, and recently, I took part in the <strong>NLP Challenge at IIT Kharagpur</strong>, which strengthened my enthusiasm for <strong>natural language processing</strong> and its role in intelligent applications.</p>
 
 <p>I’m also a <strong>volunteer</strong> and <strong>community builder</strong> through groups like <strong>MVGR GLUG</strong>, <strong>Swecha</strong>, and the <strong>National Service Scheme (NSS)</strong>, and I serve as a <strong>student member</strong> at the <strong>Center for Embedded Systems</strong> and the <strong>Center for Cyber Security Studies & Research</strong>. These roles reflect my commitment to <strong>learning</strong>, <strong>collaboration</strong>, and contributing meaningfully to the <strong>tech ecosystem</strong>.</p>
-
                 </div>
               </div>
             </div>
           </div>
-          
-          
-          
-          <h2 className="text-2xl font-bold mb-8 text-center">Technical Skills</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {skills.map((skillGroup, index) => (
-              <div 
-                key={skillGroup.category}
-                className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-card rounded-xl border p-6 shadow-sm"
-                style={{ transitionDelay: `${100 * index}ms` }}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="p-2 rounded-full bg-primary/10 mr-3">
-                    {skillGroup.icon}
-                  </div>
-                  <h3 className="text-xl font-bold">{skillGroup.category}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {skillGroup.items.map((skill, i) => (
-                    <li key={i} className="flex items-center text-muted-foreground">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></span>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
+
           <div className="flex justify-center space-x-4 mt-8">
             <Button asChild size="lg">
               <Link to="/experience">View Experience</Link>
