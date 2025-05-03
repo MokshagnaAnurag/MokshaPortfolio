@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Book, GraduationCap, Award, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,31 +35,18 @@ const Education = () => {
       institution: "MVGR College of Engineering, Vizianagaram, Andhra Pradesh",
       period: "November 2022 - May 2026 (Expected)",
       description: "Focused on Cybersecurity, IoT, and Embedded Systems. Engaged in projects involving STM32 Boards, RPLIDAR, ROS2, and smart autonomous systems.",
-      achievements: [
-        "Won the Cyber Secured Champion Competition hosted by Cyber Intelligence Global LLP among 500+ participants",
-        "Secured 2nd place in AVISHKAR Season-2 Hackathon with a prize of ₹1,00,000",
-        "Ranked in the Top 6 nationally in the Embedded Systems Scholarship Exam by SENSE Academia",
-        "Proposed drone-based solutions and delivered presentations at the Andhra Pradesh Drone Hackathon",
-        "Advanced to the Top 10 finalist teams in the Serve Smart Hackathon organized by IIT Banaras",
-        "Member - Center for Embedded Systems & Center for Cyber Security"
-      ]
     },
     {
-      degree: "Intermediate (Class 11-12)",
+      degree: "Intermediate (Class 12)",
       institution: "Apex Junior College",
       period: "June 2020 - May 2022",
       description: "Studied foundational courses in Physics, Mathematics, and Chemistry",
-      achievements: [
-      ]
     },
     {
       degree: "Schooling (Class 5–10)",
       institution: "Fort City School",
       period: "June 2014 - March 2020",
       description: "Built academic fundamentals and early interests in technology and innovation.",
-      achievements: [
-        "Tech Club Member",
-      ]
     }
   ];
 
@@ -105,17 +91,6 @@ const Education = () => {
                     <p className="mb-4 text-muted-foreground">
                       {item.description}
                     </p>
-                    
-                    <div className="mt-4">
-                      <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
-                        Achievements
-                      </h4>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {item.achievements.map((achievement, i) => (
-                          <li key={i} className="text-muted-foreground">{achievement}</li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>
