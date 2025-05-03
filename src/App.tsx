@@ -1,3 +1,4 @@
+// src/App.tsx
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,37 +14,40 @@ import NotFound from "./pages/NotFound";
 import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import AboutMe from "./pages/AboutMe";
-import Achievements from "./pages/Achievements"; // ✅ New import
+import Achievements from "./pages/Achievements";
+import Skills from "./pages/Skills";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="education" element={<Education />} />
-              <Route path="experience" element={<Experience />} />
-              <Route path="about" element={<AboutMe />} />
-              <Route path="achievements" element={<Achievements />} /> {/* ✅ New Route */}
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+        <TooltipProvider>
+          {/* Notification Systems */}
+          <Toaster />
+          <Sonner />
+          
+          {/* Routing */}
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="projects" element={<Projects />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="education" element={<Education />} />
+                <Route path="experience" element={<Experience />} />
+                <Route path="about" element={<AboutMe />} />
+                <Route path="achievements" element={<Achievements />} />
+                <Route path="skills" element={<Skills />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
-
-
-
-
