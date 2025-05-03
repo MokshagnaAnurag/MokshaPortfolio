@@ -1,0 +1,165 @@
+// components/Chatbot.tsx
+
+import { useState, useRef, useEffect } from "react";
+import { MessageSquare, X, Send } from "lucide-react";
+import { findBestResponse } from "../data/chatbotResponses";
+
+interface Message {
+  text: string;
+  isUser: boolean;
+  timestamp: Date;
+}
+
+const Chatbot = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      text: "Hi there! I'm Moksha's assistant. How can I help you?",
+      isUser: false,
+      timestamp: new Date(),
+    },
+  ]);
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!message.trim()) return;
+
+    const userMessage: Message = {
+      text: message,
+      isUser: true,
+      timestamp: new Date(),
+    };
+
+    setMessages((prev) => [...prev, userMessage]);
+    setMessage("");
+    setIsTyping(true);
+
+    setTimeout(() => {
+      const botReply: Message = {
+        text: findBestResponse(message),
+        isUser: false,
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, botReply]);
+      setIsTyping(false);
+    }, 800 + Math.random() * 800);
+  };
+
+  const toggleChatbot = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      {isOpen ? (
+        <div className="w-80 sm:w-96 h-[500px] max-h-[80vh] rounded-lg shadow-xl bg-white border border-gray-300 overflow-hidden flex flex-col">
+          {/* Header */}
+          <div className="bg-blue-600 p-4 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <MessageSquare className="w-5 h-5 text-white" />
+              <h3 className="font-medium text-white">Portfolio Assistant</h3>
+            </div>
+            <button
+              onClick={toggleChatbot}
+              className="text-white hover:bg-blue-700 rounded-full p-1"
+              aria-label="Close chatbot"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          {/* Chat Messages */}
+          <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`mb-4 max-w-[80%] ${
+                  msg.isUser ? "ml-auto text-right" : "mr-auto text-left"
+                }`}
+              >
+                <div
+                  className={`p-3 rounded-lg text-sm ${
+                    msg.isUser
+                      ? "bg-blue-600 text-white rounded-tr-none"
+                      : "bg-gray-200 text-black rounded-tl-none"
+                  }`}
+                >
+                  {msg.text}
+                </div>
+                <div className="text-xs mt-1 text-gray-500">
+                  {msg.timestamp.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}
+                </div>
+              </div>
+            ))}
+            {isTyping && (
+              <div className="mb-4 max-w-[80%] mr-auto text-left">
+                <div className="bg-gray-200 text-black p-3 rounded-lg rounded-tl-none inline-flex gap-1">
+                  <span className="animate-bounce">.</span>
+                  <span className="animate-bounce delay-150">.</span>
+                  <span className="animate-bounce delay-300">.</span>
+                </div>
+              </div>
+            )}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input */}
+          <form
+            onSubmit={handleSubmit}
+            className="border-t border-gray-300 p-4 bg-white"
+          >
+            <div className="flex items-center gap-2">
+              <input
+                ref={inputRef}
+                type="text"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Type your message..."
+                className="flex-1 bg-gray-100 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="submit"
+                disabled={!message.trim()}
+                className="bg-blue-600 hover:bg-blue-700 p-2 rounded-md text-white disabled:opacity-50"
+                aria-label="Send message"
+              >
+                <Send className="w-5 h-5" />
+              </button>
+            </div>
+          </form>
+        </div>
+      ) : (
+        <button
+          onClick={toggleChatbot}
+          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          aria-label="Open chat assistant"
+        >
+          <MessageSquare className="w-6 h-6" />
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default Chatbot;
