@@ -14,13 +14,20 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_z60mnhb",         
-        "template_k2i3kob",        
-        form.current,             
-        "Xx408ITmVJDb4iFXW"       
+        "service_z60mnhb", // EmailJS service ID
+        "template_k2i3kob", // EmailJS template ID
+        form.current,
+        "Xx408ITmVJDb4iFXW" // EmailJS public key
       )
       .then(
         () => {
+          const formData = new FormData(form.current!);
+          const name = formData.get("user_name") as string;
+          const email = formData.get("user_email") as string;
+          const message = formData.get("message") as string;
+
+          sendTelegramMessage(name, email, message);
+
           setStatus("Message sent successfully!");
           form.current?.reset();
         },
@@ -29,6 +36,29 @@ const Contact = () => {
           setStatus(`Failed to send message. Error: ${error.text}`);
         }
       );
+  };
+
+  // ✅ Telegram Bot Integration
+  const sendTelegramMessage = async (name: string, email: string, message: string) => {
+    const botToken = "7739141586:AAFBMmeQZv-DBSMQ8XCifXpBErDoQ7Dd_ZM"; // Your bot token
+    const chatId = "1147649504"; // Replace with your Telegram chat ID
+    const text = `📥 *New Contact Form Message*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n📝 *Message:* ${message}`;
+
+    try {
+      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: "Markdown",
+        }),
+      });
+    } catch (err) {
+      console.error("Telegram Error:", err);
+    }
   };
 
   return (
