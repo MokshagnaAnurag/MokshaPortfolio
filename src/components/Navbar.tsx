@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -32,6 +31,7 @@ const Navbar = () => {
     { to: "/about", label: "About Me" },
     { to: "/experience", label: "Experience" },
     { to: "/education", label: "Education" },
+    { to: "/skills", label: "Skills" },
     { to: "/projects", label: "Projects" },
     { to: "/achievements", label: "Achievements" },
     { to: "/contact", label: "Contact" },
@@ -51,7 +51,7 @@ const Navbar = () => {
             to="/" 
             className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
           >
-            Tech<span className="font-extrabold">Portfolio</span>
+            Moksh<span className="font-extrabold">Portfolio</span>
           </NavLink>
           
           {/* Desktop Navigation */}
