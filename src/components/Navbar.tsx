@@ -29,10 +29,11 @@ const Navbar = () => {
 
   const navLinks = [
     { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
+    { to: "/about", label: "About Me" },
     { to: "/experience", label: "Experience" },
     { to: "/education", label: "Education" },
     { to: "/projects", label: "Projects" },
+    { to: "/achievements", label: "Achievements" },
     { to: "/contact", label: "Contact" },
   ];
 
