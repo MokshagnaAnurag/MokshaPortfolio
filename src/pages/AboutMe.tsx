@@ -145,15 +145,12 @@ const AboutMe = () => {
               <div className="w-full md:w-2/3">
                 <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
                 <div className="text-muted-foreground space-y-4">
-                  <p>
-                    I'm an enthusiastic Electronics and Communication Engineering (ECE) student at MVGR College of Engineering, graduating in 2026. My passion lies at the intersection of Cybersecurity, IoT, Embedded Systems, and AI/ML, where I strive to build intelligent and secure systems that have real-world impact.
-                  </p>
-                  <p>
-                    I'm deeply driven by curiosity and innovation—whether it's developing autonomous vehicle prototypes, securing industrial control systems, or building smart embedded platforms using STM32 boards. I enjoy working on diverse projects, from automatic number plate recognition using Python and OpenCV to participating in NLP challenges and open-source contributions through platforms like GirlScript Summer of Code and Swecha.
-                  </p>
-                  <p>
-                    With a growing interest in Security Operations Center (SOC) roles, I'm honing my skills in threat detection, incident response, and penetration testing, backed by tools like Metasploit, Nmap, and Wireshark. I'm also actively involved in tech communities like NSS, MVGR GLUG, and the Center for Cyber Security Studies & Research, fostering collaborative learning and tech outreach.
-                  </p>
+                  <p>I’m <strong>Kankati Mokshagna Anurag</strong>, a passionate and driven Electronics and Communication Engineering student at <strong>MVGR College of Engineering</strong>, graduating in <strong>2026</strong>. With a strong foundation in <strong>Cybersecurity, IoT, and Embedded Systems</strong>, I’m constantly exploring how these domains intersect with real-world applications — from <strong>autonomous vehicle technologies</strong> to <strong>space exploration</strong>.</p>
+
+<p>My work spans across diverse technical areas, including <strong>penetration testing</strong>, <strong>exploit development</strong>, <strong>embedded system design</strong>, and <strong>AI/ML integration</strong>. I’ve built projects like <em>vehicle number plate detection using Python and OpenCV</em>, <em>Boston house price prediction using Gradient Boosting</em>, and contributed to open-source initiatives like <strong>GirlScript Summer of Code</strong> and <strong>Swecha Andhra Pradesh</strong>. I actively participate in <strong>hackathons</strong>, and recently, I took part in the <strong>NLP Challenge at IIT Kharagpur</strong>, which strengthened my enthusiasm for <strong>natural language processing</strong> and its role in intelligent applications.</p>
+
+<p>I’m also a <strong>volunteer</strong> and <strong>community builder</strong> through groups like <strong>MVGR GLUG</strong>, <strong>Swecha</strong>, and the <strong>National Service Scheme (NSS)</strong>, and I serve as a <strong>student member</strong> at the <strong>Center for Embedded Systems</strong> and the <strong>Center for Cyber Security Studies & Research</strong>. These roles reflect my commitment to <strong>learning</strong>, <strong>collaboration</strong>, and contributing meaningfully to the <strong>tech ecosystem</strong>.</p>
+
                 </div>
               </div>
             </div>
