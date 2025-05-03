@@ -48,7 +48,7 @@ const AboutMe = () => {
       items: [,
         "RTOS",
         "Microcontrollers",,
-        "Hardware Interfaces (SPI, I2C, UART)"
+        "Hardware Interfaces (I2C, UART)"
       ],
       icon: <Cpu size={24} className="text-tech-embedded" />
     },
@@ -67,10 +67,8 @@ const AboutMe = () => {
       category: "AI & Machine Learning",
       items: [
         "TensorFlow & PyTorch",
-        "Machine Learning Algorithms",
         "Neural Networks",
         "Computer Vision",
-        "Edge AI Applications"
       ],
       icon: <Database size={24} className="text-tech-ai" />
     },
