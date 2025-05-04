@@ -25,7 +25,7 @@ export const skills: Skill[] = [
   {
     name: "MQTT & CoAP Protocols",
     proficiency: 80,
-    icon: "https://www.svgrepo.com/show/416516/network-protocol.svg",
+    icon: "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/mqtt-8ot5sapk9r2ye0mg3lpwc.png/mqtt-hw7teutszoc951aipqyuji.png?_a=DATAdtAAZAA0",
     category: "iot",
     description: "Using MQTT and CoAP for lightweight messaging and communication in IoT systems."
   },
@@ -39,7 +39,7 @@ export const skills: Skill[] = [
   {
     name: "Wireless Sensor Networks",
     proficiency: 75,
-    icon: "https://www.svgrepo.com/show/15178/satellite-dish.svg",
+    icon: "https://cdn-icons-png.freepik.com/256/11232/11232043.png?ga=GA1.1.1063440746.1746326841&semt=ais_hybrid",
     category: "iot",
     description: "Design and implementation of wireless sensor networks for IoT data collection and processing."
   },
@@ -48,21 +48,21 @@ export const skills: Skill[] = [
   {
     name: "RTOS",
     proficiency: 80,
-    icon: "https://www.svgrepo.com/show/354249/cpu.svg",
+    icon: "https://icon.icepanel.io/AWS/svg/Internet-of-Things/FreeRTOS.svg",
     category: "embedded",
     description: "Real-Time Operating Systems for efficient task scheduling and execution in embedded systems."
   },
   {
     name: "Microcontrollers",
     proficiency: 85,
-    icon: "https://www.svgrepo.com/show/377803/microcontroller-chip.svg",
+    icon: "https://cdn-icons-png.freepik.com/256/2332/2332743.png?ga=GA1.1.1063440746.1746326841&semt=ais_hybrid",
     category: "embedded",
     description: "Programming microcontrollers for embedded system applications, including sensor integration and control."
   },
   {
     name: "Hardware Interfaces (I2C, UART)",
     proficiency: 90,
-    icon: "https://www.svgrepo.com/show/374050/motherboard.svg",
+    icon: "https://freesvg.org/img/1551521251.png",
     category: "embedded",
     description: "Utilizing hardware interfaces like SPI, I2C, and UART for communication between microcontrollers and peripherals."
   },
@@ -78,14 +78,14 @@ export const skills: Skill[] = [
   {
     name: "Autonomous Navigation",
     proficiency: 80,
-    icon: "https://www.svgrepo.com/show/148901/gps.svg",
+    icon: "https://img.freepik.com/free-vector/self-driving-car-concept-illustration_114360-10865.jpg?ga=GA1.1.1063440746.1746326841&semt=ais_hybrid&w=740",
     category: "robotics",
     description: "Developing autonomous navigation systems for robots using algorithms like SLAM and path planning."
   },
   {
     name: "Sensor Fusion",
     proficiency: 80,
-    icon: "https://www.svgrepo.com/show/492071/sensor.svg",
+    icon: "https://cdn-icons-png.freepik.com/256/11232/11232043.png?ga=GA1.1.1063440746.1746326841&semt=ais_hybrid",
     category: "robotics",
     description: "Combining data from multiple sensors to enhance the accuracy and reliability of robotic systems."
   },
