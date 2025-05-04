@@ -191,14 +191,14 @@ const Chatbot = () => {
 
     {/* Chatbot Button */}
     <button
-      onClick={toggleChatbot}
-      className="hover:bg-[#2563eb] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
-      aria-label="Open chat assistant"
-    >
-      <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
-    </button>
-  </div>
-</Draggable>
+                onClick={toggleChatbot}
+                className="bg-[#000000] hover:bg-[#2563eb] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
+                aria-label="Open chat assistant"
+              >
+                <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
+              </button>
+            </div>
+          </Draggable>
 
         )}
       </div>
