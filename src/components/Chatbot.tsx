@@ -177,7 +177,7 @@ const Chatbot = () => {
             <div className="flex flex-col items-center">
               {/* Tooltip */}
               <div className="mb-2 text-sm text-white bg-blue-600 px-3 py-1 rounded-full shadow-lg animate-bounce relative">
-                💬 Chat
+                💬 Chat with me!
                 <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
                   <svg
                     className="w-4 h-4 text-blue-600 animate-pulse"
