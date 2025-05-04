@@ -164,7 +164,7 @@ const Home = () => {
               My Technical Expertise
             </h2>
             <p className="text-lg text-muted-foreground">
-              Driven by a passion for intelligent automation and cybersecurity, I leverage a broad spectrum of technologies to build secure, efficient, and innovative solutions that address real-world challenges.
+            I'm passionate about intelligent automation and cybersecurity, and I use a wide range of technologies to create secure, efficient, and innovative solutions that solve real-world problems.
             </p>
           </div>
 
