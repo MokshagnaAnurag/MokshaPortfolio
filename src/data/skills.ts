@@ -18,7 +18,7 @@ export const skills: Skill[] = [
   {
     name: "IoT Architecture Design",
     proficiency: 85,
-    icon: "https://www.svgrepo.com/show/354233/internet-of-things-iot.svg",
+    icon: "https://cdn-icons-png.freepik.com/256/6702/6702322.png?ga=GA1.1.1063440746.1746326841&semt=ais_hybrid",
     category: "iot",
     description: "Designing scalable and efficient IoT architectures for interconnected devices."
   },
