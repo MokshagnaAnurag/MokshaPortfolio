@@ -170,7 +170,7 @@ const Achievements = () => {
               rel="noopener noreferrer"
               className="mt-4 inline-block bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition"
             >
-              View on Drive
+              View
             </a>
           </div>
         </Card>
