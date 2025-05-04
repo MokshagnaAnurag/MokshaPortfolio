@@ -1,7 +1,6 @@
-// components/Chatbot.tsx
-
 import { useState, useRef, useEffect } from "react";
-import { MessageSquare, X, Send } from "lucide-react";
+import { X, Send } from "lucide-react";
+import Draggable from "react-draggable";
 import { findBestResponse } from "../data/chatbotResponses";
 
 interface Message {
@@ -68,96 +67,102 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
-      {isOpen ? (
-        <div className="w-80 sm:w-96 h-[500px] max-h-[80vh] rounded-lg shadow-xl bg-white border border-gray-300 overflow-hidden flex flex-col">
-          {/* Header */}
-          <div className="bg-blue-600 p-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <MessageSquare className="w-5 h-5 text-white" />
-              <h3 className="font-medium text-white">Portfolio Assistant</h3>
+    <div className="fixed z-50 bottom-6 right-6">
+      <div className="relative">
+        {isOpen ? (
+          <Draggable handle=".chatbot-drag-handle" cancel="input,button,textarea">
+            <div className="w-80 sm:w-96 h-[500px] max-h-[80vh] rounded-lg shadow-xl bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 overflow-hidden flex flex-col">
+              {/* Header */}
+              <div className="chatbot-drag-handle bg-blue-600 p-4 flex items-center justify-between cursor-move">
+                <div className="flex items-center gap-2">
+                  <img src="/robot.svg" alt="Chatbot" width={20} height={20} />
+                  <h3 className="font-medium text-white">Moksh Bot</h3>
+                </div>
+                <button
+                  onClick={toggleChatbot}
+                  className="text-white hover:bg-blue-700 rounded-full p-1"
+                  aria-label="Close chatbot"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Chat Messages */}
+              <div className="flex-1 p-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                {messages.map((msg, idx) => (
+                  <div
+                    key={idx}
+                    className={`mb-4 max-w-[80%] ${
+                      msg.isUser ? "ml-auto text-right" : "mr-auto text-left"
+                    }`}
+                  >
+                    <div
+                      className={`p-3 rounded-lg text-sm ${
+                        msg.isUser
+                          ? "bg-blue-600 text-white rounded-tr-none"
+                          : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-tl-none"
+                      }`}
+                    >
+                      {msg.text}
+                    </div>
+                    <div className="text-xs mt-1 text-gray-500 dark:text-gray-400">
+                      {msg.timestamp.toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </div>
+                  </div>
+                ))}
+                {isTyping && (
+                  <div className="mb-4 max-w-[80%] mr-auto text-left">
+                    <div className="bg-gray-200 dark:bg-gray-700 text-black dark:text-white p-3 rounded-lg rounded-tl-none inline-flex gap-1">
+                      <span className="animate-bounce">.</span>
+                      <span className="animate-bounce delay-150">.</span>
+                      <span className="animate-bounce delay-300">.</span>
+                    </div>
+                  </div>
+                )}
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Input */}
+              <form
+                onSubmit={handleSubmit}
+                className="border-t border-gray-300 dark:border-gray-700 p-4 bg-white dark:bg-gray-900"
+              >
+                <div className="flex items-center gap-2">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Type your message..."
+                    className="flex-1 bg-gray-100 dark:bg-gray-800 dark:text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                  <button
+                    type="submit"
+                    disabled={!message.trim()}
+                    className="bg-blue-600 hover:bg-blue-700 p-2 rounded-md text-white disabled:opacity-50"
+                    aria-label="Send message"
+                  >
+                    <Send className="w-5 h-5" />
+                  </button>
+                </div>
+              </form>
             </div>
+          </Draggable>
+        ) : (
+          <Draggable cancel="button">
             <button
               onClick={toggleChatbot}
-              className="text-white hover:bg-blue-700 rounded-full p-1"
-              aria-label="Close chatbot"
+              className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+              aria-label="Open chat assistant"
             >
-              <X className="w-5 h-5" />
+              <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
             </button>
-          </div>
-
-          {/* Chat Messages */}
-          <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`mb-4 max-w-[80%] ${
-                  msg.isUser ? "ml-auto text-right" : "mr-auto text-left"
-                }`}
-              >
-                <div
-                  className={`p-3 rounded-lg text-sm ${
-                    msg.isUser
-                      ? "bg-blue-600 text-white rounded-tr-none"
-                      : "bg-gray-200 text-black rounded-tl-none"
-                  }`}
-                >
-                  {msg.text}
-                </div>
-                <div className="text-xs mt-1 text-gray-500">
-                  {msg.timestamp.toLocaleTimeString([], {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
-                </div>
-              </div>
-            ))}
-            {isTyping && (
-              <div className="mb-4 max-w-[80%] mr-auto text-left">
-                <div className="bg-gray-200 text-black p-3 rounded-lg rounded-tl-none inline-flex gap-1">
-                  <span className="animate-bounce">.</span>
-                  <span className="animate-bounce delay-150">.</span>
-                  <span className="animate-bounce delay-300">.</span>
-                </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-
-          {/* Input */}
-          <form
-            onSubmit={handleSubmit}
-            className="border-t border-gray-300 p-4 bg-white"
-          >
-            <div className="flex items-center gap-2">
-              <input
-                ref={inputRef}
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message..."
-                className="flex-1 bg-gray-100 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                disabled={!message.trim()}
-                className="bg-blue-600 hover:bg-blue-700 p-2 rounded-md text-white disabled:opacity-50"
-                aria-label="Send message"
-              >
-                <Send className="w-5 h-5" />
-              </button>
-            </div>
-          </form>
-        </div>
-      ) : (
-        <button
-          onClick={toggleChatbot}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-          aria-label="Open chat assistant"
-        >
-          <MessageSquare className="w-6 h-6" />
-        </button>
-      )}
+          </Draggable>
+        )}
+      </div>
     </div>
   );
 };
