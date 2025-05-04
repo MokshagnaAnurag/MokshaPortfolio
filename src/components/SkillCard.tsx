@@ -17,10 +17,8 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
 
   return (
     <div
-      className={`gradient-border p-0.5 h-full transition-opacity duration-500 ease-out`}
-      style={{
-        opacity: visible ? 1 : 0,
-      }}
+      className="gradient-border p-0.5 h-full transition-opacity duration-500 ease-out"
+      style={{ opacity: visible ? 1 : 0 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -59,6 +57,8 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
 };
 
 const SkillIcon = ({ iconName }: { iconName: string }) => {
+  const isUrl = iconName.startsWith("http");
+
   const getIconColor = (icon: string) => {
     const colorMap: Record<string, string> = {
       react: "text-blue-400",
@@ -80,7 +80,13 @@ const SkillIcon = ({ iconName }: { iconName: string }) => {
     return colorMap[icon] || "text-primary";
   };
 
-  return (
+  return isUrl ? (
+    <img
+      src={iconName}
+      alt="skill-icon"
+      className="w-10 h-10 object-contain rounded-full bg-white p-1"
+    />
+  ) : (
     <div
       className={`w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold ${getIconColor(
         iconName
