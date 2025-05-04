@@ -119,7 +119,37 @@ export const skills: Skill[] = [
     category: "ai_ml",
     description: "Applying computer vision techniques for image processing, object detection, and pattern recognition."
   },
+// Programming Languages
+  {
+    name: "C Language",
+    proficiency: 80,
+    icon: "https://www.svgrepo.com/show/452046/c.svg",
+    category: "programming_language",
+    description: "Proficient in structured programming using C, with a focus on embedded systems and low-level hardware control."
+  },
+  {
+    name: "Python",
+    proficiency: 90,
+    icon: "https://www.svgrepo.com/show/452091/python.svg",
+    category: "programming_language",
+    description: "Experienced in Python for scripting, automation, data analysis, and backend development."
+  },
 
+  // Signal Processing
+  {
+    name: "MATLAB",
+    proficiency: 85,
+    icon: "https://www.svgrepo.com/show/374034/matlab.svg",
+    category: "signal_processing",
+    description: "Skilled in using MATLAB for signal processing, numerical computing, and system modeling."
+  },
+  {
+    name: "GNU Octave",
+    proficiency: 75,
+    icon: "https://www.svgrepo.com/show/354260/gnu.svg",
+    category: "signal_processing",
+    description: "Experienced with GNU Octave for numerical computations and compatibility with MATLAB for signal analysis."
+  },
   // Cybersecurity
   {
     name: "Web Application Penetration Testing",
