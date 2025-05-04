@@ -6,18 +6,31 @@ const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState("");
 
+  // Load audio (sound effect)
+  const sendSound = useRef<HTMLAudioElement | null>(null);
+
+  const playSound = () => {
+    if (sendSound.current) {
+      sendSound.current.currentTime = 0; // Restart from beginning
+      sendSound.current.play().catch((err) => {
+        console.error("Sound play error:", err);
+      });
+    }
+  };
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    playSound(); // 👈 Play sound on click
     setStatus("Sending...");
 
     if (!form.current) return;
 
     emailjs
       .sendForm(
-        "service_z60mnhb", // EmailJS service ID
-        "template_k2i3kob", // EmailJS template ID
+        "service_z60mnhb",
+        "template_k2i3kob",
         form.current,
-        "Xx408ITmVJDb4iFXW" // EmailJS public key
+        "Xx408ITmVJDb4iFXW"
       )
       .then(
         () => {
@@ -38,10 +51,9 @@ const Contact = () => {
       );
   };
 
-  // ✅ Telegram Bot Integration
   const sendTelegramMessage = async (name: string, email: string, message: string) => {
-    const botToken = "7739141586:AAFBMmeQZv-DBSMQ8XCifXpBErDoQ7Dd_ZM"; // Your bot token
-    const chatId = "1147649504"; // Replace with your Telegram chat ID
+    const botToken = "7739141586:AAFBMmeQZv-DBSMQ8XCifXpBErDoQ7Dd_ZM";
+    const chatId = "1147649504";
     const text = `📥 *New Contact Form Message*\n\n👤 *Name:* ${name}\n📧 *Email:* ${email}\n📝 *Message:* ${message}`;
 
     try {
@@ -68,6 +80,9 @@ const Contact = () => {
         <p className="mb-12 text-lg text-muted-foreground">
           Have a question or want to collaborate? Send me a message!
         </p>
+
+        {/* Hidden audio element */}
+        <audio ref={sendSound} src="/sounds/send.mp3" preload="auto" />
 
         <form
           ref={form}
