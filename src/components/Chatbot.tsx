@@ -23,6 +23,11 @@ const Chatbot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Audio references
+  const openSoundRef = useRef<HTMLAudioElement>(null);
+  const sendSoundRef = useRef<HTMLAudioElement>(null);
+  const replySoundRef = useRef<HTMLAudioElement>(null);
+
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
@@ -41,6 +46,9 @@ const Chatbot = () => {
     e.preventDefault();
     if (!message.trim()) return;
 
+    // Play user send sound
+    sendSoundRef.current?.play();
+
     const userMessage: Message = {
       text: message,
       isUser: true,
@@ -57,6 +65,10 @@ const Chatbot = () => {
         isUser: false,
         timestamp: new Date(),
       };
+
+      // Play bot reply sound
+      replySoundRef.current?.play();
+
       setMessages((prev) => [...prev, botReply]);
       setIsTyping(false);
     }, 800 + Math.random() * 800);
@@ -64,10 +76,19 @@ const Chatbot = () => {
 
   const toggleChatbot = () => {
     setIsOpen((prev) => !prev);
+    if (!isOpen) {
+      // Play chatbot open sound
+      openSoundRef.current?.play();
+    }
   };
 
   return (
     <div className="fixed z-50 bottom-6 right-6">
+      {/* Sound effects */}
+      <audio ref={openSoundRef} src="/sounds/opening.mp3" preload="auto" />
+      <audio ref={sendSoundRef} src="/sounds/send.mp3" preload="auto" />
+      <audio ref={replySoundRef} src="/sounds/reply.mp3" preload="auto" />
+
       <div className="relative">
         {isOpen ? (
           <Draggable handle=".chatbot-drag-handle" cancel="input,button,textarea">
@@ -153,14 +174,15 @@ const Chatbot = () => {
           </Draggable>
         ) : (
           <Draggable cancel="button">
-            <button
-              onClick={toggleChatbot}
-              className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-              aria-label="Open chat assistant"
-            >
-              <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
-            </button>
-          </Draggable>
+          <button
+            onClick={toggleChatbot}
+            className="bg-[#3b82f6] hover:bg-[#2563eb] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
+            aria-label="Open chat assistant"
+          >
+            <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
+          </button>
+        </Draggable>
+        
         )}
       </div>
     </div>
