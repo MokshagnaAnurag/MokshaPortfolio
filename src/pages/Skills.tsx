@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import SkillCard from "../components/SkillCard";
 import { skills, Skill } from "../data/skills";
 
-type Category = Skill["category"] | "all";
+type Category = Skill["category"] | "all" | "programming" | "signal_processing";
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");
@@ -24,7 +24,8 @@ const Skills = () => {
     { value: "embedded", label: "Embedded Systems" },
     { value: "robotics", label: "Robotics" },
     { value: "ai_ml", label: "AI & Machine Learning" },
-    { value: "cybersecurity", label: "Cybersecurity" }
+    { value: "cybersecurity", label: "Cybersecurity" },
+    { value: "signal_processing", label: "Signal Processing" }
   ];
 
   return (
