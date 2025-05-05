@@ -174,34 +174,31 @@ const Chatbot = () => {
           </Draggable>
         ) : (
           <Draggable cancel="button">
- <div className="flex flex-col items-center">
-  {/* Tooltip */}
-  <div className="mb-2 text-sm text-black dark:text-white bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-lg animate-bounce relative border border-gray-300 dark:border-gray-600">
-    💬 Chat with me!
-    <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
-      <svg
-        className="w-4 h-4 animate-pulse text-black dark:text-white"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path d="M10 12l-6-6h12l-6 6z" />
-      </svg>
-    </div>
-  </div>
-</div>
+            <div className="flex flex-col items-center">
+              {/* Tooltip when chatbot is closed */}
+              <div className="mb-2 text-sm text-black dark:text-white bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-lg animate-bounce relative border border-gray-300 dark:border-gray-600">
+                💬 Chat with me!
+                <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
+                  <svg
+                    className="w-4 h-4 animate-pulse text-black dark:text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M10 12l-6-6h12l-6 6z" />
+                  </svg>
+                </div>
+              </div>
 
-
-    {/* Chatbot Button */}
-    <button
+              {/* Chatbot button */}
+              <button
                 onClick={toggleChatbot}
-                className="bg-[#000000] hover:bg-[#2563eb] text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
+                className="bg-black hover:bg-blue-600 text-white p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110"
                 aria-label="Open chat assistant"
               >
                 <img src="/robot.svg" alt="Open Chatbot" width={24} height={24} />
               </button>
             </div>
           </Draggable>
-
         )}
       </div>
     </div>
