@@ -174,20 +174,22 @@ const Chatbot = () => {
           </Draggable>
         ) : (
           <Draggable cancel="button">
-  <div className="flex flex-col items-center">
-    {/* Tooltip */}
-    <div className="mb-2 text-sm text-white px-3 py-1 rounded-full shadow-lg animate-bounce relative">
-      💬 Chat with me!
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
-        <svg
-          className="w-4 h-4 animate-pulse"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M10 12l-6-6h12l-6 6z" />
-        </svg>
-      </div>
+ <div className="flex flex-col items-center">
+  {/* Tooltip */}
+  <div className="mb-2 text-sm text-black dark:text-white bg-white dark:bg-gray-800 px-3 py-1 rounded-full shadow-lg animate-bounce relative border border-gray-300 dark:border-gray-600">
+    💬 Chat with me!
+    <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1">
+      <svg
+        className="w-4 h-4 animate-pulse text-black dark:text-white"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path d="M10 12l-6-6h12l-6 6z" />
+      </svg>
     </div>
+  </div>
+</div>
+
 
     {/* Chatbot Button */}
     <button
