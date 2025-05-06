@@ -18,7 +18,7 @@ export const skills: Skill[] = [
   {
     name: "IoT Architecture Design",
     proficiency: 85,
-    icon: "https://www.svgrepo.com/show/354233/internet-of-things-iot.svg",
+    icon: "https://www.svgrepo.com/show/420202/internet-internet-of-things-iot.svg",
     category: "iot",
     description: "Designing scalable and efficient IoT architectures for interconnected devices."
   },
@@ -71,7 +71,7 @@ export const skills: Skill[] = [
   {
     name: "ROS (Robot Operating System)",
     proficiency: 75,
-    icon: "https://upload.wikimedia.org/wikipedia/commons/b/bb/Ros_logo.svg",
+    icon: "https://www.svgrepo.com/show/110246/robot.svg",
     category: "robotics",
     description: "Using ROS for robotic system development, including communication, simulation, and control."
   },
@@ -101,7 +101,7 @@ export const skills: Skill[] = [
   {
     name: "TensorFlow & PyTorch",
     proficiency: 70,
-    icon: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg",
+    icon: "https://www.svgrepo.com/show/303229/artificial-intelligence-ai.svg",
     category: "ai_ml",
     description: "Using TensorFlow and PyTorch for building and training AI models, particularly in computer vision and deep learning."
   },
@@ -124,14 +124,14 @@ export const skills: Skill[] = [
   {
     name: "C Language",
     proficiency: 80,
-    icon: "https://www.svgrepo.com/show/136/browser.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     category: "programming_language",
     description: "Proficient in structured programming using C, with a focus on embedded systems and low-level hardware control."
   },
   {
     name: "Python",
     proficiency: 90,
-    icon: "https://www.svgrepo.com/show/452091/python.svg",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     category: "programming_language",
     description: "Experienced in Python for scripting, automation."
   },
