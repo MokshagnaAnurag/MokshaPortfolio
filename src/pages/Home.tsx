@@ -34,7 +34,7 @@ const useTypingEffect = (text: string, speed: number = 50) => {
 
 const Home = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
-  const typedName = useTypingEffect(" H Hello, I'm Kankati Mokshagna Anurag ", 100);
+  const typedName = useTypingEffect(" Hello, I'm Kankati Mokshagna Anurag ", 100);
 
   // Scroll animation for "animate-on-scroll" elements
   useEffect(() => {
@@ -115,7 +115,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              Web Application Pentester | Robotics | Embedded Systems & IoT Developer | ROS2 & Sensor Fusion Specialist | AI/ML | Simulation Expert (Gazebo/RViz) 🚀
+            Building Smarter Systems — From Securing Web Apps to Powering Autonomous Robots with AI & Sensor Fusion 🚀
             </p>
             <div className="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
               <Button asChild size="lg" className="font-medium">
