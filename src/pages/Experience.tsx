@@ -31,6 +31,19 @@ const Experience = () => {
 
   const experienceItems = [
     {
+      title: "Summer Research Intern ",
+      company: "National Institute of Technology Karnataka",
+      location: "	Surathkal, Mangaluru, Karnataka, India",
+      period: "May 2025 - Present",
+      description: "Gained hands-on experience in penetration testing, vulnerability analysis, and exploit development under industry mentorship.",
+      responsibilities: [
+        "Performed penetration testing using tools like Nmap, Gobuster, and Metasploit",
+        "Conducted vulnerability assessments and documented potential security issues",
+        "Analyzed network traffic using Wireshark and implemented secure configurations",
+        "Worked with VeraCrypt to explore secure data storage practices"
+      ]
+    },
+    {
       title: "Cyber Security Intern",
       company: "ShadowFox",
       location: "Remote, India",
@@ -52,7 +65,6 @@ const Experience = () => {
       responsibilities: [
         "Collaborated on research projects to analyze current cybersecurity trends",
         "Assisted in developing awareness programs and security documentation",
-        "Participated in security drills and data protection workshops",
         "Contributed to discussions influencing institutional cybersecurity strategy"
       ]
     },
@@ -79,7 +91,6 @@ const Experience = () => {
         "Contributed to Swecha Voice AI Telugu and OpenStreetMap projects",
         "Promoted open-source awareness in student communities",
         "Participated in regional workshops and tech outreach events",
-        "Coordinated with developers and mentors to scale project contributions"
       ]
     }
   ];
