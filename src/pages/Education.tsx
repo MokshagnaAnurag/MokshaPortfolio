@@ -37,7 +37,7 @@ const Education = () => {
       description: "Focused on Cybersecurity, IoT, and Embedded Systems. Engaged in projects involving STM32 Boards, RPLIDAR, ROS2, and smart autonomous systems.",
     },
     {
-      degree: "Intermediate (Class 12)",
+      degree: "Higher secondary school (Class 11-12)",
       institution: "Apex Junior College",
       period: "June 2020 - May 2022",
       description: "Studied foundational courses in Physics, Mathematics, and Chemistry",
