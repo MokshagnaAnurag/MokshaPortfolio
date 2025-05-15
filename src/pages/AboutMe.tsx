@@ -111,10 +111,6 @@ const AboutMe = () => {
                   </p>
 
                   <p>
-                    My work spans across diverse technical areas, including <strong>penetration testing</strong>, <strong>exploit development</strong>, <strong>embedded system design</strong>, and <strong>AI/ML integration</strong>. I’ve built projects like <em>vehicle number plate detection using Python and OpenCV</em>, <em>Boston house price prediction using Gradient Boosting</em>, and contributed to open-source initiatives like <strong>GirlScript Summer of Code</strong> and <strong>Swecha Andhra Pradesh</strong>. I actively participate in <strong>hackathons</strong>, and recently, I took part in the <strong>NLP Challenge at IIT Kharagpur</strong>, which strengthened my enthusiasm for <strong>natural language processing</strong> and its role in intelligent applications.
-                  </p>
-
-                  <p>
                     I’m also a <strong>volunteer</strong> and <strong>community builder</strong> through groups like <strong>MVGR GLUG</strong>, <strong>Swecha</strong>, and the <strong>National Service Scheme (NSS)</strong>, and I serve as a <strong>student member</strong> at the <strong>Center for Embedded Systems</strong> and the <strong>Center for Cyber Security Studies & Research</strong>. These roles reflect my commitment to <strong>learning</strong>, <strong>collaboration</strong>, and contributing meaningfully to the <strong>tech ecosystem</strong>.
                   </p>
                 </div>
