@@ -35,12 +35,9 @@ const Experience = () => {
       company: "National Institute of Technology Karnataka",
       location: "	Surathkal, Mangaluru, Karnataka, India",
       period: "May 2025 - Present",
-      description: "Gained hands-on experience in penetration testing, vulnerability analysis, and exploit development under industry mentorship.",
+      description: "",
       responsibilities: [
-        "Performed penetration testing using tools like Nmap, Gobuster, and Metasploit",
-        "Conducted vulnerability assessments and documented potential security issues",
-        "Analyzed network traffic using Wireshark and implemented secure configurations",
-        "Worked with VeraCrypt to explore secure data storage practices"
+
       ]
     },
     {
