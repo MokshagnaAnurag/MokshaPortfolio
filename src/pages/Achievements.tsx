@@ -13,7 +13,7 @@ const achievements = [
   {
     id: 1,
     title: "Cyber Secured Champion",
-    date: "July 2023",
+    date: "August 2024",
     description:
       "Won the Cyber Secured Champion Competition hosted by Cyber Intelligence Global LLP among 500+ participants.",
     icon: <Award className="h-6 w-6 text-green-500" />,
@@ -25,7 +25,7 @@ const achievements = [
   {
     id: 2,
     title: "2nd Place - AVISHKAR Season-2",
-    date: "August 2023",
+    date: "December 2024",
     description:
       "Secured 2nd place in AVISHKAR Season-2 Hackathon with a prize of ₹1,00,000.",
     icon: <Award className="h-6 w-6 text-yellow-500" />,
@@ -37,7 +37,7 @@ const achievements = [
   {
     id: 3,
     title: "Top 6 - Embedded Systems Exam",
-    date: "October 2023",
+    date: "October 2024",
     description:
       "Ranked in the Top 6 nationally in the Embedded Systems Scholarship Exam by SENSE Academia.",
     icon: <Award className="h-6 w-6 text-red-500" />,
@@ -49,7 +49,7 @@ const achievements = [
   {
     id: 4,
     title: "Drone Hackathon - AP",
-    date: "November 2023",
+    date: "September 2024",
     description:
       "Proposed drone-based solutions and delivered impactful presentations at the Andhra Pradesh Drone Hackathon.",
     icon: <Award className="h-6 w-6 text-purple-500" />,
@@ -61,7 +61,7 @@ const achievements = [
   {
     id: 5,
     title: "Volunteer & IoT Speaker - Freedom Fest 2025",
-    date: "April 2025",
+    date: "March 2025",
     description:
       "Served as a Volunteer and IoT Speaker at Freedom Fest 2025 organized by Swecha. Trained 25 students in IoT using Arduino UNO, NodeMCU (ESP8266), real-time sensors, LIDAR, and Tinkercad simulations. Facilitated cloud-based IoT integration and hands-on learning for embedded systems and automation.",
     icon: <Award className="h-6 w-6 text-pink-500" />,
