@@ -107,12 +107,29 @@ const AboutMe = () => {
                 <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
                 <div className="text-muted-foreground space-y-4">
                   <p>
-                    I’m <strong>Kankati Mokshagna Anurag</strong>, a passionate and driven Electronics and Communication Engineering student at <strong>MVGR College of Engineering</strong>, graduating in <strong>2026</strong>. With a strong foundation in <strong>Cybersecurity, IoT, and Embedded Systems</strong>, I’m constantly exploring how these domains intersect with real-world applications — from <strong>autonomous vehicle technologies</strong> to <strong>space exploration</strong>.
-                  </p>
+  Mokshagna Anurag Kankati is a dedicated cybersecurity and robotics enthusiast with a strong focus on engineering secure, intelligent, and autonomous systems that drive innovation and resilience. His hands-on expertise spans <strong>Web Application Pentesting</strong>, <strong>Robotics Development</strong>, <strong>Microcontroller Systems</strong>, and <strong>AI/ML Integration</strong>, enabling him to design technologies that are both future-ready and transformative.
+</p>
 
-                  <p>
-                    I’m also a <strong>volunteer</strong> and <strong>community builder</strong> through groups like <strong>MVGR GLUG</strong>, <strong>Swecha</strong>, and the <strong>National Service Scheme (NSS)</strong>, and I serve as a <strong>student member</strong> at the <strong>Center for Embedded Systems</strong> and the <strong>Center for Cyber Security Studies & Research</strong>. These roles reflect my commitment to <strong>learning</strong>, <strong>collaboration</strong>, and contributing meaningfully to the <strong>tech ecosystem</strong>.
-                  </p>
+<p>
+  Currently, Mokshagna is gaining valuable experience as a <strong>Summer Research Intern at the National Institute of Technology Karnataka</strong>, and as an <strong>AI Intern at Indux Solar</strong>. His previous roles include contributing to <strong>IoT and embedded systems solutions</strong> as a <strong>Student Member at the Center For Embedded Systems, MVGR College of Engineering</strong>, and promoting <strong>open-source technologies</strong> as a <strong>Member of SwechaAP</strong>.
+</p>
+
+<p>
+  In addition to his technical roles, Mokshagna is actively involved in <strong>community building and volunteering</strong> through groups like <strong>MVGR GLUG</strong>, <strong>Swecha</strong>, and the <strong>National Service Scheme (NSS)</strong>. He also serves as a <strong>student member</strong> at the <strong>Center for Embedded Systems</strong> and the <strong>Center for Cyber Security Studies & Research</strong>, reflecting his commitment to <strong>learning</strong>, <strong>collaboration</strong>, and meaningful contributions to the <strong>tech ecosystem</strong>.
+</p>
+
+<p>
+  Mokshagna's academic background includes a <strong>Bachelor of Technology in Electrical, Electronics, and Communications Engineering</strong> from <strong>MVGR College of Engineering</strong>, and a <strong>Class 12 PCM</strong> from <strong>Apex Junior College</strong>.
+</p>
+
+<p>
+  With a passion for <strong>innovation</strong> and a <strong>collaborative spirit</strong>, Mokshagna is always eager to connect and drive technological advancements forward.
+</p>
+
+<p>
+  Feel free to connect with Mokshagna on <a href="https://www.linkedin.com/in/kankati-mokshagna-anurag/" target="_blank"><strong>LinkedIn</strong></a> to explore potential collaborations and innovations together!
+</p>
+
                 </div>
               </div>
             </div>
