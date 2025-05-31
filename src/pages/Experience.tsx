@@ -37,9 +37,25 @@ const Experience = () => {
       period: "May 2025 - Present",
       description: "",
       responsibilities: [
+        "Working on Internet of Vehicles (IoV)"
 
       ]
     },
+{
+  "title": "Academic Research Intern",
+  "company": "UnlockDiscounts",
+  "location": "Remote",
+  "period": "May 2025 - Present",
+  "description": "",
+  "responsibilities": [
+    "Conduct research: Design and execute research projects.",
+    "Data analysis: Collect, analyze, and interpret complex data.",
+    "Literature review: Conduct thorough reviews of existing research.",
+    "Methodology development: Develop and apply research methodologies.",
+    "Collaboration and presentation: Collaborate with colleagues and present research findings."
+  ]
+},
+
     {
       title: "Cyber Security Intern",
       company: "ShadowFox",
