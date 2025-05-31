@@ -139,7 +139,7 @@ const Experience = () => {
         "Organized and participated in regional tech workshops",
         "Mentored students in open-source contribution practices"
       ],
-      skills: ["Open Source", "Community Building", "AI/ML", "Geographic Information Systems"],
+      skills: ["Open Source", "Community Building"],
       logo: "https://media.licdn.com/dms/image/v2/C560BAQG87c6Y46rfxw/company-logo_100_100/company-logo_100_100/0/1630670125923?e=1753920000&v=beta&t=wQTlw2yHGywatX1NdNPY6XhoPbjVFOJO-GvwDr25fDk",
       category: "community",
       status: "ongoing"
@@ -158,7 +158,7 @@ const Experience = () => {
         "Supported organizations in implementing effective security measures",
         "Analyzed current cybersecurity trends and future implications"
       ],
-      skills: ["Threat Intelligence", "Security Research", "Training Development", "Risk Assessment"],
+      skills: ["Threat Intelligence", "Security Research"],
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFafHZzL_xBNg/company-logo_100_100/company-logo_100_100/0/1699632075773?e=1753920000&v=beta&t=i9WW0LHucZ0dnXQh0lrZJYUejBWlmwpZEI8J57LOfHk",
       category: "cybersecurity",
       status: "completed"
