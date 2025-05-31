@@ -67,20 +67,7 @@ const Experience = () => {
       ],
       logo: "https://media.licdn.com/dms/image/v2/D560BAQEhtVaBN3hNjw/company-logo_100_100/B56ZbC67ftHgAU-/0/1747026952648/shadowfoxinfo_logo?e=1753920000&v=beta&t=vYHBzDiYQSbvBfX-F2hSvCatIbF6urD9PwOpH7HVzRw",
     },
-    {
-      title: "Intern",
-      company: "Center for Cyber Security Studies & Research",
-      location: "India",
-      period: "September 2024 - December 2024",
-      description:
-        "Engaged in research-oriented cybersecurity initiatives, contributing to awareness and analytical studies on modern threats.",
-      responsibilities: [
-        "Collaborated on research projects to analyze current cybersecurity trends",
-        "Assisted in developing awareness programs and security documentation",
-        "Contributed to discussions influencing institutional cybersecurity strategy",
-      ],
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQG87c6Y46rfxw/company-logo_100_100/company-logo_100_100/0/1630670125923?e=1753920000&v=beta&t=wQTlw2yHGywatX1NdNPY6XhoPbjVFOJO-GvwDr25fDk",
-    },
+  
     {
       title: "Student Member",
       company: "Center For Embedded Systems, MVGR College of Engineering",
