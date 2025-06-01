@@ -120,12 +120,28 @@ const certifications = [
       "Completed the Embedded For Beginners course from NIELIT, covering fundamentals of embedded systems, microcontrollers, and interfacing. Credential ID: OLC 20958.",
     icon: <GraduationCap className="h-6 w-6 text-green-500" />,
     driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
-    backgroundImage: "url('https://media.licdn.com/dms/image/v2/D562DAQGqfk697LGShQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1724252233547?e=1746882000&v=beta&t=QoWrH5kaMzPWbQRFQ08O1q2QG9Hub6j8P2bY-se9sPQ')",
+    driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
+    backgroundImage: "",
     tag: "Embedded Systems",
     tags: ["Embedded", "NIELIT", "IoT", "Microcontrollers"],
     category: "certification",
     status: "completed"
-  }
+  },
+  {
+  id: 4,
+  title: "Introduction To Industry 4.0 and Industrial Internet Of Things - NPTEL",
+  date: "April 2025",
+  description:
+    "Completed the NPTEL course on Introduction to Industry 4.0 and Industrial Internet of Things offered by IIT Kharagpur, covering smart manufacturing, cyber-physical systems, IIoT architecture, and use cases in modern industries.",
+  icon: <GraduationCap className="h-6 w-6 text-blue-500" />,
+  driveLink: "https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9i0j/view?usp=sharing", // <-- replace with actual link
+  backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
+  tag: "Industry 4.0",
+  tags: ["Industry 4.0", "IIoT", "", "Smart Manufacturing"],
+  category: "certification",
+  status: "completed"
+}
+
 ];
 
 const Achievements = () => {
