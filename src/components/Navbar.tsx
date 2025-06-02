@@ -10,14 +10,7 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,99 +31,96 @@ const Navbar = () => {
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 py-4">
-        <nav className="flex items-center justify-between">
-          <NavLink 
-            to="/" 
-            className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+    <div className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-2">
+      <nav
+        className={`transition-all duration-300 ease-in-out rounded-b-xl px-6 py-3 mx-auto max-w-5xl ${
+          isScrolled
+            ? "bg-background/90 shadow-lg backdrop-blur-md border border-white/20"
+            : "bg-white/5 dark:bg-white/5 backdrop-blur-md border border-white/10"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <NavLink
+            to="/"
+            className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-widest"
           >
             Moksh<span className="font-extrabold">Portfolio</span>
           </NavLink>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <ul className="flex space-x-8">
-              {navLinks.map((link) => (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    className={({ isActive }) => 
-                      `text-base font-medium transition-colors hover:text-primary ${
-                        isActive 
-                          ? "text-primary relative after:content-[''] after:absolute after:left-0 after:bottom-[-5px] after:h-0.5 after:w-full after:bg-primary"
-                          : "text-foreground/80"
-                      }`
-                    }
-                  >
-                    {link.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-            
-            <Button 
-              variant="ghost" 
+
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center space-x-6">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-all duration-200 transform active:scale-95 tracking-wide relative group ${
+                    isActive
+                      ? "text-blue-500"
+                      : "text-foreground hover:text-blue-400"
+                  }`
+                }
+              >
+                <span className="relative group-hover:underline group-hover:underline-offset-8 group-hover:decoration-2">
+                  {link.label}
+                </span>
+              </NavLink>
+            ))}
+          </div>
+
+          {/* Theme Toggle & Mobile Menu Button */}
+          <div className="flex items-center space-x-2">
+            <Button
+              variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              aria-label="Toggle theme"
+              className="transition hover:bg-black/10 dark:hover:bg-white/10 text-foreground"
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </Button>
+            <div className="lg:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="transition hover:bg-black/10 dark:hover:bg-white/10 text-foreground"
+              >
+                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </Button>
+            </div>
           </div>
-          
-          {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden gap-2">
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </Button>
-            
-            <Button 
-              variant="ghost" 
-              size="icon"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </Button>
-          </div>
-        </nav>
-        
+        </div>
+
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-background border-t">
-            <ul className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <li key={link.to}>
-                  <NavLink
-                    to={link.to}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={({ isActive }) => 
-                      `block py-2 text-base font-medium transition-colors ${
-                        isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
-                      }`
-                    }
-                  >
-                    {link.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+        <div
+          className={`lg:hidden transition-all duration-500 ease-in-out overflow-hidden ${
+            mobileMenuOpen
+              ? "max-h-[500px] mt-4 pt-4 border-t border-white/20 bg-black/20 dark:bg-white/10 rounded-xl backdrop-blur-md animate-fadeIn"
+              : "max-h-0"
+          }`}
+        >
+          <div className="flex flex-col space-y-3 px-2 pb-2">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `text-base font-medium px-3 py-2 rounded-md tracking-wide transition-all duration-200 transform active:scale-95 ${
+                    isActive
+                      ? "text-blue-500 bg-blue-100/20 dark:bg-blue-900/40 backdrop-blur-sm"
+                      : "hover:text-blue-400"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+      </nav>
+    </div>
   );
 };
 
