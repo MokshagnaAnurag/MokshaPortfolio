@@ -43,7 +43,7 @@ const Navbar = () => {
           {/* Logo */}
           <NavLink
             to="/"
-            className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-widest"
+            className="text-lg font-bold text-white tracking-widest"
           >
             Moksh<span className="font-extrabold">Portfolio</span>
           </NavLink>
