@@ -137,7 +137,7 @@ const certifications = [
   driveLink: "https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9i0j/view?usp=sharing", // <-- replace with actual link
   backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
   tag: "Industry 4.0",
-  tags: ["Industry 4.0", "IIoT", "", "Smart Manufacturing"],
+  tags: ["Industry 4.0", "IIoT", "Smart Manufacturing"],
   category: "certification",
   status: "completed"
 }
