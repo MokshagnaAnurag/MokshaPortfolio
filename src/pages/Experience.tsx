@@ -50,7 +50,7 @@ const Experience = () => {
   };
 
   const experienceItems = [
-  {
+     {
     title: "Freelance Developer",
     company: "Fiverr",
     location: "Remote",
@@ -68,7 +68,6 @@ const Experience = () => {
     category: "freelance",
     status: "current"
   },
-
     {
       title: "Summer Research Intern",
       company: "National Institute of Technology Karnataka",
@@ -87,7 +86,6 @@ const Experience = () => {
       category: "research",
       status: "current"
     },
-    
     {
       title: "Academic Research Intern",
       company: "UnlockDiscounts",
@@ -159,7 +157,7 @@ const Experience = () => {
         "Organized and participated in regional tech workshops",
         "Mentored students in open-source contribution practices"
       ],
-      skills: ["Open Source", "Community Building"],
+      skills: ["Open Source", "Community Building", "AI/ML", "Geographic Information Systems"],
       logo: "https://media.licdn.com/dms/image/v2/C560BAQG87c6Y46rfxw/company-logo_100_100/company-logo_100_100/0/1630670125923?e=1753920000&v=beta&t=wQTlw2yHGywatX1NdNPY6XhoPbjVFOJO-GvwDr25fDk",
       category: "community",
       status: "ongoing"
@@ -178,7 +176,7 @@ const Experience = () => {
         "Supported organizations in implementing effective security measures",
         "Analyzed current cybersecurity trends and future implications"
       ],
-      skills: ["Threat Intelligence", "Security Research"],
+      skills: ["Threat Intelligence", "Security Research", "Training Development", "Risk Assessment"],
       logo: "https://media.licdn.com/dms/image/v2/D4D0BAQFafHZzL_xBNg/company-logo_100_100/company-logo_100_100/0/1699632075773?e=1753920000&v=beta&t=i9WW0LHucZ0dnXQh0lrZJYUejBWlmwpZEI8J57LOfHk",
       category: "cybersecurity",
       status: "completed"
