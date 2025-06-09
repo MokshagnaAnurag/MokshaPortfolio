@@ -64,7 +64,7 @@ const Experience = () => {
       "Managed project timelines and expectations as an independent contractor"
     ],
     skills: ["Freelancing", "Client Communication", "Web Development", "Debugging", "Consulting"],
-    logo: "https://npm-assets.fiverrcdn.com/assets/layout/fiverr-og-logo.99c4dbf.png",
+    logo: "https://th.bing.com/th/id/OIP.DU-CEn_a5oYN4lobC2wgfwHaHa?r=0&rs=1&pid=ImgDetMain",
     category: "freelance",
     status: "current"
   },
