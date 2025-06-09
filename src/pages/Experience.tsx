@@ -50,6 +50,25 @@ const Experience = () => {
   };
 
   const experienceItems = [
+  {
+    title: "Freelance Developer",
+    company: "Fiverr",
+    location: "Remote",
+    period: "June 2025 - Present",
+    type: "Remote",
+    description: "Providing freelance technical services including software development, debugging, and tech consultation for clients worldwide via the Fiverr platform.",
+    responsibilities: [
+      "Delivered tailored coding solutions to client-specific problems",
+      "Provided consultation and troubleshooting for web and software projects",
+      "Maintained clear communication with clients to understand and meet project requirements",
+      "Managed project timelines and expectations as an independent contractor"
+    ],
+    skills: ["Freelancing", "Client Communication", "Web Development", "Debugging", "Consulting"],
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Fiverr_Logo_2020.svg",
+    category: "freelance",
+    status: "current"
+  },
+
     {
       title: "Summer Research Intern",
       company: "National Institute of Technology Karnataka",
@@ -68,6 +87,7 @@ const Experience = () => {
       category: "research",
       status: "current"
     },
+    
     {
       title: "Academic Research Intern",
       company: "UnlockDiscounts",
