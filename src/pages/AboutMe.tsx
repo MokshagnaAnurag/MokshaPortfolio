@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
 
 const AboutMe = () => {
   // Scroll animation for elements entering viewport
@@ -102,71 +103,53 @@ const AboutMe = () => {
               </div>
 
               {/* Right: Bio */}
-             <div className="w-full md:w-2/3">
-  <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
-  <div className="text-muted-foreground space-y-4">
-    <p>
-      I'm Mokshagna Anurag Kankati — passionate about building secure, intelligent, and autonomous systems that integrate
-      <strong> cybersecurity</strong>, <strong> embedded IoT</strong>, <strong> robotics</strong>, and <strong> AI/ML</strong>.
-      My goal is to design resilient and impactful technologies that solve real-world problems at scale.
+              <div className="w-full md:w-2/3">
+                <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
+                <div className="text-muted-foreground space-y-4">
+                 <p>
+      I'm <strong>Kankati Mokshagna Anurag</strong>, passionate about building secure, intelligent, and autonomous systems. I love working at the intersection of <strong>cybersecurity</strong>, <strong>embedded IoT</strong>, <strong>robotics</strong>, and <strong>AI/ML</strong> to solve real-world problems.
     </p>
 
     <p>
-      Currently, I'm working as a <strong>Summer Research Intern at the National Institute of Technology Karnataka</strong>,
-      where I’ve been optimizing <strong>V2I communication</strong> in Internet of Vehicles (IoV) and improving edge data processing efficiency by <strong>22%</strong>.
-      I’ve also developed lightweight IoT modules using <strong>MQTT</strong> and <strong>CAN protocols</strong> to boost system responsiveness and scalability.
+      Currently, I'm a <strong>Summer Research Intern at NIT Karnataka</strong>, where I’ve enhanced <strong>Internet of Vehicles (IoV)</strong> performance by optimizing V2I communication and improving edge data processing efficiency by <strong>22%</strong>. I also developed lightweight modules using <strong>MQTT</strong> and <strong>CAN protocols</strong>.
     </p>
 
     <p>
-      During my time at <strong>Indux Solar</strong>, I deployed a <strong>solar panel fault prediction model</strong> with <strong>95.3% accuracy</strong> using
-      <strong> TensorFlow Lite</strong> on edge devices. This proactive solution helped reduce downtime and improve maintenance strategies.
+      In cybersecurity, I’ve performed advanced <strong>penetration testing</strong>, improving test coverage by <strong>15%</strong> and reducing attack surfaces by <strong>30%</strong> using tools like <strong>Metasploit</strong> and <strong>Burp Suite</strong>.
     </p>
 
     <p>
-      In the cybersecurity domain, I’ve conducted advanced penetration testing — enhancing test coverage by <strong>15%</strong> and reducing client attack surfaces by
-      <strong> 30%</strong> through the identification and exploitation of critical vulnerabilities using tools like <strong>Metasploit</strong> and <strong>Burp Suite</strong>.
+      At the <strong>Center for Embedded Systems, MVGR</strong>, I worked on wireless sensor networks and <strong>PID control systems</strong> using <strong>STM32</strong> and <strong>Arduino</strong>, improving robotics precision through real-time data integration.
     </p>
 
     <p>
-      As a member of the <strong>Center for Embedded Systems</strong> at <strong>MVGR College of Engineering</strong>, I’ve worked on wireless sensor networks and
-      <strong> PID control systems</strong> using <strong>STM32</strong> and <strong>Arduino</strong> microcontrollers — integrating real-time data for robotics and automation.
+      I actively contribute to open-source projects like <strong>Voice AI Telugu</strong> and <strong>OpenStreetMap</strong>. I'm also a volunteer at <strong>SwechaAP</strong>, <strong>MVGR GLUG</strong>, and the <strong>National Service Scheme (NSS)</strong>, promoting community-driven technology through workshops and awareness programs.
     </p>
 
-    <p>
-      I’m a strong advocate of open-source technology and actively contribute to initiatives like <strong>Voice AI Telugu</strong> and <strong>OpenStreetMap</strong>.
-      As a part of <strong>SwechaAP</strong>, and a volunteer with <strong>MVGR GLUG</strong> and the <strong>National Service Scheme (NSS)</strong>, I help organize
-      workshops and hands-on sessions to promote community-driven tech learning.
-    </p>
-
-    <p>Some highlights from my journey include:</p>
-
+    <p><strong>Some of my achievements include:</strong></p>
     <ul className="list-disc pl-5">
-      <li>🏆 <strong>Winner of the Cyber Secured Champion Competition</strong> among 500+ participants</li>
-      <li>🥈 <strong>2nd Place at AVISHKAR Season-2 Hackathon</strong> – ₹1 Lakh Prize</li>
-      <li>🎯 <strong>Top 6 Rank</strong> in the Embedded Scholarship Exam by SENSE Academia</li>
-      <li>🚁 Presented drone innovations at the <strong>Andhra Pradesh Hackathon on Drones</strong></li>
-      <li>🏅 <strong>Top 10 Finalist</strong> at the Serve Smart Hackathon by IIT BHU</li>
-      <li>🎖️ Finalist at <strong>Hack IITK</strong> organized by <strong>IIT Kanpur’s C3i Hub</strong></li>
+      <li>🏆 Winner – <strong>Cyber Secured Champion Competition</strong> (500+ participants)</li>
+      <li>🥈 2nd Place – <strong>AVISHKAR Season-2 Hackathon</strong> (₹1 Lakh prize)</li>
+      <li>🎯 <strong>Top 6 Rank</strong> – Embedded Scholarship Exam by SENSE Academia</li>
+      <li>🚁 Presented drone-based innovations at <strong>Andhra Pradesh Hackathon on Drones</strong></li>
+      <li>🏅 <strong>Top 10 Finalist</strong> – Serve Smart Hackathon by IIT BHU</li>
+      <li>🎖️ Finalist – <strong>Hack IITK</strong> by IIT Kanpur's C3i Hub</li>
     </ul>
 
     <p>
-      I’m currently pursuing a <strong>B.Tech in Electronics and Communication Engineering</strong> at
-      <strong> MVGR College of Engineering</strong>, and I completed my Class 12 with a focus on PCM at <strong>Apex Junior College</strong>.
+      I’m currently pursuing a <strong>B.Tech in Electronics and Communication Engineering</strong> at <strong>MVGR College of Engineering</strong> and completed my Class 12 (PCM) at <strong>Apex Junior College</strong>.
     </p>
 
     <p>
-      I enjoy working at the intersection of secure design, embedded systems, and AI-powered robotics.
-      I thrive in environments where innovation meets purpose — where we can build systems that truly make a difference while standing up to modern-day threats.
-    </p>
-
-    <p>
-      <strong>Let’s connect</strong> if you're working on secure, intelligent, and resilient systems — I'd love to collaborate or share insights.
+      I enjoy creating solutions where innovation, impact, and security come together. If you're working on the future of tech, <strong>let’s connect</strong>!
       <br /><br />
       🔗 <a href="https://www.linkedin.com/in/kankati-mokshagna-anurag/" target="_blank"><strong>Connect with me on LinkedIn</strong></a>
     </p>
-  </div>
-</div>
 
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Navigation Buttons */}
           <div className="flex justify-center space-x-4 mt-8">
