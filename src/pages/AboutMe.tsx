@@ -102,72 +102,71 @@ const AboutMe = () => {
               </div>
 
               {/* Right: Bio */}
-              <div className="w-full md:w-2/3">
-                <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
-                <div className="text-muted-foreground space-y-4">
-                  <p>
-                    Mokshagna Anurag Kankati is driven by a passion for designing secure, intelligent, and autonomous systems that integrate
-                    <strong> cybersecurity</strong>, <strong> embedded IoT</strong>, <strong> robotics</strong>, and <strong> AI/ML</strong> to solve complex challenges with measurable impact.
-                    His interdisciplinary expertise enables him to architect technologies that are both resilient and transformative.
-                  </p>
+             <div className="w-full md:w-2/3">
+  <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
+  <div className="text-muted-foreground space-y-4">
+    <p>
+      I'm Mokshagna Anurag Kankati — passionate about building secure, intelligent, and autonomous systems that integrate
+      <strong> cybersecurity</strong>, <strong> embedded IoT</strong>, <strong> robotics</strong>, and <strong> AI/ML</strong>.
+      My goal is to design resilient and impactful technologies that solve real-world problems at scale.
+    </p>
 
-                  <p>
-                    Currently, he is a <strong>Summer Research Intern at the National Institute of Technology Karnataka</strong>,
-                    where he enhanced <strong>Internet of Vehicles (IoV)</strong> performance by optimizing V2I communication and increasing edge data processing efficiency by <strong>22%</strong>.
-                    He also developed lightweight IoT modules using <strong>MQTT</strong> and <strong>CAN protocols</strong> to improve system responsiveness and scalability.
-                  </p>
+    <p>
+      Currently, I'm working as a <strong>Summer Research Intern at the National Institute of Technology Karnataka</strong>,
+      where I’ve been optimizing <strong>V2I communication</strong> in Internet of Vehicles (IoV) and improving edge data processing efficiency by <strong>22%</strong>.
+      I’ve also developed lightweight IoT modules using <strong>MQTT</strong> and <strong>CAN protocols</strong> to boost system responsiveness and scalability.
+    </p>
 
-                  <p>
-                    At <strong>Indux Solar</strong>, Mokshagna deployed a <strong>solar panel fault prediction model</strong> with <strong>95.3% accuracy</strong> using <strong>TensorFlow Lite</strong> on edge devices,
-                    enabling proactive maintenance and significantly reducing downtime.
-                  </p>
+    <p>
+      During my time at <strong>Indux Solar</strong>, I deployed a <strong>solar panel fault prediction model</strong> with <strong>95.3% accuracy</strong> using
+      <strong> TensorFlow Lite</strong> on edge devices. This proactive solution helped reduce downtime and improve maintenance strategies.
+    </p>
 
-                  <p>
-                    In the field of cybersecurity, he has conducted advanced penetration testing, improving security test coverage by <strong>15%</strong> and reducing client attack surfaces by <strong>30%</strong>
-                    through the identification and exploitation of critical vulnerabilities using tools like <strong>Metasploit</strong> and <strong>Burp Suite</strong>.
-                  </p>
+    <p>
+      In the cybersecurity domain, I’ve conducted advanced penetration testing — enhancing test coverage by <strong>15%</strong> and reducing client attack surfaces by
+      <strong> 30%</strong> through the identification and exploitation of critical vulnerabilities using tools like <strong>Metasploit</strong> and <strong>Burp Suite</strong>.
+    </p>
 
-                  <p>
-                    At the <strong>Center for Embedded Systems, MVGR College of Engineering</strong>, Mokshagna designed wireless sensor networks and <strong>PID control systems</strong> using
-                    <strong> STM32</strong> microcontrollers and <strong> Arduino</strong>, integrating real-time data to enhance precision in robotics and automation.
-                  </p>
+    <p>
+      As a member of the <strong>Center for Embedded Systems</strong> at <strong>MVGR College of Engineering</strong>, I’ve worked on wireless sensor networks and
+      <strong> PID control systems</strong> using <strong>STM32</strong> and <strong>Arduino</strong> microcontrollers — integrating real-time data for robotics and automation.
+    </p>
 
-                  <p>
-                    He is an active advocate for open-source technology, contributing to projects such as <strong>Voice AI Telugu</strong> and <strong>OpenStreetMap</strong>.
-                    As a member of <strong>SwechaAP</strong> and a volunteer at <strong>MVGR GLUG</strong> and the <strong>National Service Scheme (NSS)</strong>,
-                    he promotes community-driven technology and organizes hands-on workshops to foster technical awareness.
-                  </p>
+    <p>
+      I’m a strong advocate of open-source technology and actively contribute to initiatives like <strong>Voice AI Telugu</strong> and <strong>OpenStreetMap</strong>.
+      As a part of <strong>SwechaAP</strong>, and a volunteer with <strong>MVGR GLUG</strong> and the <strong>National Service Scheme (NSS)</strong>, I help organize
+      workshops and hands-on sessions to promote community-driven tech learning.
+    </p>
 
-                  <p>Mokshagna’s achievements include:</p>
+    <p>Some highlights from my journey include:</p>
 
-                  <ul className="list-disc pl-5">
-                    <li>🏆 <strong>Cyber Secured Champion Competition Winner</strong> among 500+ participants</li>
-                    <li>🥈 <strong>2nd Place at AVISHKAR Season-2 Hackathon</strong> with a prize of ₹1 Lakh</li>
-                    <li>🎯 <strong>Top 6 Rank</strong> in the Embedded Scholarship Exam by SENSE Academia</li>
-                    <li>🚁 Presented drone-based innovations at the <strong>Andhra Pradesh Hackathon on Drones</strong></li>
-                    <li>🏅 <strong>Top 10 finalist</strong> at the Serve Smart Hackathon by IIT BHU</li>
-                    <li>🎖️ Finalist at <strong>Hack IITK</strong> organized by <strong>IIT Kanpur's C3i Hub</strong></li>
-                  </ul>
+    <ul className="list-disc pl-5">
+      <li>🏆 <strong>Winner of the Cyber Secured Champion Competition</strong> among 500+ participants</li>
+      <li>🥈 <strong>2nd Place at AVISHKAR Season-2 Hackathon</strong> – ₹1 Lakh Prize</li>
+      <li>🎯 <strong>Top 6 Rank</strong> in the Embedded Scholarship Exam by SENSE Academia</li>
+      <li>🚁 Presented drone innovations at the <strong>Andhra Pradesh Hackathon on Drones</strong></li>
+      <li>🏅 <strong>Top 10 Finalist</strong> at the Serve Smart Hackathon by IIT BHU</li>
+      <li>🎖️ Finalist at <strong>Hack IITK</strong> organized by <strong>IIT Kanpur’s C3i Hub</strong></li>
+    </ul>
 
-                  <p>
-                    Academically, he is pursuing a <strong>Bachelor of Technology in Electronics and Communication Engineering</strong> at
-                    <strong> MVGR College of Engineering</strong> and completed his Class 12 (PCM) at <strong>Apex Junior College</strong>.
-                  </p>
+    <p>
+      I’m currently pursuing a <strong>B.Tech in Electronics and Communication Engineering</strong> at
+      <strong> MVGR College of Engineering</strong>, and I completed my Class 12 with a focus on PCM at <strong>Apex Junior College</strong>.
+    </p>
 
-                  <p>
-                    Mokshagna excels at bridging the gaps between secure design, embedded systems, and AI-powered robotics.
-                    He thrives in environments where innovation, clarity, and impact intersect—building solutions that improve lives and withstand modern threats.
-                  </p>
+    <p>
+      I enjoy working at the intersection of secure design, embedded systems, and AI-powered robotics.
+      I thrive in environments where innovation meets purpose — where we can build systems that truly make a difference while standing up to modern-day threats.
+    </p>
 
-                  <p>
-                    <strong>Let’s connect</strong> if you’re working on the future of intelligent, secure, and resilient systems.
-                    <br /><br />
-                    🔗 <a href="https://www.linkedin.com/in/kankati-mokshagna-anurag/" target="_blank"><strong>Connect with Mokshagna on LinkedIn</strong></a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <p>
+      <strong>Let’s connect</strong> if you're working on secure, intelligent, and resilient systems — I'd love to collaborate or share insights.
+      <br /><br />
+      🔗 <a href="https://www.linkedin.com/in/kankati-mokshagna-anurag/" target="_blank"><strong>Connect with me on LinkedIn</strong></a>
+    </p>
+  </div>
+</div>
+
 
           {/* Navigation Buttons */}
           <div className="flex justify-center space-x-4 mt-8">
