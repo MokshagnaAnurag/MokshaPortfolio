@@ -1,0 +1,147 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 99%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 230 70% 55%; /* Tech blue primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 260 60% 60%; /* Tech purple secondary */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 45%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 230 70% 55%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 230 70% 55%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 260 60% 55%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 5% 15%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 240 5% 26%;
+    --input: 240 5% 26%;
+    --ring: 230 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(78, 125, 233, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(155, 93, 229, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .dark body::before {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(78, 125, 233, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(155, 93, 229, 0.15) 0%, transparent 50%);
+  }
+}
+
+.grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(78, 125, 233, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(78, 125, 233, 0.05) 1px, transparent 1px);
+}
+
+.dark .grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(78, 125, 233, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(78, 125, 233, 0.1) 1px, transparent 1px);
+}
+
+@layer components {
+  .tech-card {
+    @apply relative overflow-hidden rounded-lg border bg-card p-6 text-card-foreground shadow transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    @apply bg-gradient-to-r from-tech-iot via-tech-ai to-tech-cybersec;
+  }
+  
+  .hero-gradient {
+    @apply bg-gradient-to-br from-background via-background to-accent/30 dark:from-background dark:via-background dark:to-accent/20;
+  }
+  
+  .animated-gradient-border {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    @apply bg-gradient-to-r from-tech-iot via-tech-ai to-tech-cybersec animate-gradient-x;
+  }
+}
