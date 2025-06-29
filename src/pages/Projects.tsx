@@ -28,7 +28,7 @@ const Projects = () => {
       image: "https://thumbs.dreamstime.com/z/self-driving-delivery-bot-travels-along-urban-path-ai-generated-autonomous-delivery-robot-navigating-city-sidewalk-dusk-313006773.jpg", // Updated image for Robotics
       tags: ["ROS", "Python", "LiDAR", "SLAM"],
       links: {
-        github: "https://github.com",
+        github: "https://github.com/MokshagnaAnurag/Self_driving_bot.git",
       }
     },
     {
@@ -109,7 +109,7 @@ const Projects = () => {
         }
       },
     {
-  id: 3,
+  id: 9,
   title: "Map Text Extractor",
   description: "A Python tool that extracts region numbers and place names from topographic maps using OCR. Utilizes EasyOCR, OpenCV, and image processing techniques to enhance accuracy. Outputs results as CSV files and visualization images, organized in timestamped directories.",
   category: "Computer Vision",
