@@ -51,7 +51,7 @@ const Experience = () => {
 
   const experienceItems = [
      {
-    title: "Freelance Developer",
+    title: "Freelance",
     company: "Fiverr",
     location: "Remote",
     period: "June 2025 - Present",
