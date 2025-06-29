@@ -107,7 +107,19 @@ const Projects = () => {
         links: {
           github: "https://github.com/MokshagnaAnurag/SEMANTIC-SEGMENTATION-IN-AUTONOMOUS-VEHICLES.git",
         }
-      }
+      },
+    {
+  id: 3,
+  title: "Map Text Extractor",
+  description: "A Python tool that extracts region numbers and place names from topographic maps using OCR. Utilizes EasyOCR, OpenCV, and image processing techniques to enhance accuracy. Outputs results as CSV files and visualization images, organized in timestamped directories.",
+  category: "Computer Vision",
+  image: "https://img.freepik.com/premium-vector/optical-character-recognition-ocr-technology-by-recognize-text-from-photo_518018-304.jpg?w=2000", // Replace with your actual image if available
+  tags: ["Python", "OCR", "EasyOCR", "OpenCV", "Map Processing"],
+  links: {
+    github: "https://github.com/MokshagnaAnurag/OCR.git", // Replace with actual GitHub repo link for this project
+  }
+}
+
       
   ];
   
