@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Skill } from "../data/skills";
+=======
+import { useState, useEffect } from "react";
+import { Skill } from "../data/skills";
+import { Card } from "@/components/ui/card";
+>>>>>>> ab37948 (Initial commit)
 
 interface SkillCardProps {
   skill: Skill;
@@ -23,7 +29,11 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+<<<<<<< HEAD
       <div className="bg-card h-full rounded-lg p-6 flex flex-col transition-all duration-300 hover:transform hover:scale-[1.02]">
+=======
+      <Card className="h-full rounded-lg p-6 flex flex-col transition-all duration-300 hover:transform hover:scale-[1.02]">
+>>>>>>> ab37948 (Initial commit)
         <div className="flex items-center justify-between mb-4">
           <div
             className={`w-12 h-12 rounded-full flex items-center justify-center ${
@@ -37,7 +47,11 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
           </span>
         </div>
 
+<<<<<<< HEAD
         <h3 className={`text-xl font-bold mb-2 ${isHovered ? "text-gradient" : ""}`}>
+=======
+        <h3 className={`text-xl font-bold mb-2 ${isHovered ? "text-gradient" : "text-foreground"}`}>
+>>>>>>> ab37948 (Initial commit)
           {skill.name}
         </h3>
 
@@ -52,7 +66,11 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
         </div>
 
         <p className="text-sm text-muted-foreground flex-grow">{skill.description}</p>
+<<<<<<< HEAD
       </div>
+=======
+      </Card>
+>>>>>>> ab37948 (Initial commit)
     </div>
   );
 };
@@ -98,6 +116,7 @@ const SkillIcon = ({ iconName }: { iconName: string }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SkillCard;
 =======
 import { useState, useEffect } from "react";
@@ -201,3 +220,6 @@ const SkillIcon = ({ iconName }: { iconName: string }) => {
 
 export default SkillCard;
 >>>>>>> 51fef60c666af5adf00d02537fe5b6df7cfad5b7
+=======
+export default SkillCard;
+>>>>>>> ab37948 (Initial commit)

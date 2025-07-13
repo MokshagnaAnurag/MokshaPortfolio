@@ -26,6 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
+<<<<<<< HEAD
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
@@ -62,13 +63,55 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+=======
+					DEFAULT: '#3b82f6', // blue-600
+					foreground: '#fff',
+				},
+				secondary: {
+					DEFAULT: '#e0e7ff', // blue-100
+					foreground: '#1e293b',
+				},
+				destructive: {
+					DEFAULT: '#ef4444',
+					foreground: '#fff',
+				},
+				muted: {
+					DEFAULT: '#f1f5f9',
+					foreground: '#64748b',
+				},
+				accent: {
+					DEFAULT: '#60a5fa', // blue-400
+					foreground: '#1e293b',
+				},
+				popover: {
+					DEFAULT: '#fff',
+					foreground: '#1e293b',
+				},
+				card: {
+					DEFAULT: '#fff',
+					foreground: '#1e293b',
+				},
+				sidebar: {
+					DEFAULT: '#1e293b',
+					foreground: '#fff',
+					primary: '#3b82f6',
+					'primary-foreground': '#fff',
+					accent: '#60a5fa',
+					'accent-foreground': '#1e293b',
+					border: '#3b82f6',
+					ring: '#3b82f6',
+>>>>>>> ab37948 (Initial commit)
 				},
 				tech: {
 					'iot': '#4e7de9',
 					'embedded': '#ff6b6b',
 					'robotics': '#6bcb77',
 					'ai': '#9b5de5',
+<<<<<<< HEAD
 					'cybersec': '#f15bb5'
+=======
+					'cybersec': '#f15bb5',
+>>>>>>> ab37948 (Initial commit)
 				},
 			},
 			borderRadius: {
@@ -100,6 +143,19 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
+<<<<<<< HEAD
+=======
+				},
+				'spotlight': {
+					'0%': {
+						opacity: '0',
+						transform: 'translate(-72%, -62%) scale(0.5)',
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translate(-50%,-40%) scale(1)',
+					},
+>>>>>>> ab37948 (Initial commit)
 				}
 			},
 			animation: {
@@ -108,7 +164,12 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
+<<<<<<< HEAD
 				'spin-slow': 'spin-slow 12s linear infinite'
+=======
+				'spin-slow': 'spin-slow 12s linear infinite',
+				'spotlight': 'spotlight 2s ease .75s 1 forwards'
+>>>>>>> ab37948 (Initial commit)
 			}
 		}
 	},

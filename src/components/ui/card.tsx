@@ -9,7 +9,14 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "rounded-lg border bg-card text-card-foreground shadow-sm",
+=======
+      // Use semi-transparent backgrounds for both themes
+      "rounded-lg border shadow-lg backdrop-blur-md",
+      "bg-white/80 dark:bg-black/70",
+      "text-foreground",
+>>>>>>> ab37948 (Initial commit)
       className
     )}
     {...props}
@@ -36,7 +43,11 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       "text-2xl font-semibold leading-none tracking-tight",
+=======
+      "text-2xl font-semibold leading-none tracking-tight text-foreground",
+>>>>>>> ab37948 (Initial commit)
       className
     )}
     {...props}

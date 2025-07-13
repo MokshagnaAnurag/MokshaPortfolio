@@ -1,6 +1,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, Github, Linkedin } from "lucide-react";
+<<<<<<< HEAD
+=======
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> ab37948 (Initial commit)
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -87,17 +92,28 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
+<<<<<<< HEAD
           className="space-y-6 bg-card p-8 rounded-xl shadow-lg text-left"
+=======
+          className="space-y-6 bg-white dark:bg-[#18192a] p-8 rounded-xl shadow-lg text-left text-black dark:text-white"
+>>>>>>> ab37948 (Initial commit)
         >
           <div>
             <label htmlFor="user_name" className="block mb-2 font-medium">
               Name
             </label>
+<<<<<<< HEAD
             <input
               type="text"
               name="user_name"
               required
               className="w-full p-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+=======
+            <Input
+              type="text"
+              name="user_name"
+              required
+>>>>>>> ab37948 (Initial commit)
               placeholder="Your Name"
             />
           </div>
@@ -106,11 +122,18 @@ const Contact = () => {
             <label htmlFor="user_email" className="block mb-2 font-medium">
               Email
             </label>
+<<<<<<< HEAD
             <input
               type="email"
               name="user_email"
               required
               className="w-full p-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+=======
+            <Input
+              type="email"
+              name="user_email"
+              required
+>>>>>>> ab37948 (Initial commit)
               placeholder="you@example.com"
             />
           </div>
@@ -119,6 +142,7 @@ const Contact = () => {
             <label htmlFor="message" className="block mb-2 font-medium">
               Message
             </label>
+<<<<<<< HEAD
             <textarea
               name="message"
               required
@@ -126,6 +150,14 @@ const Contact = () => {
               className="w-full p-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Your Message"
             ></textarea>
+=======
+            <Textarea
+              name="message"
+              required
+              rows={5}
+              placeholder="Your Message"
+            />
+>>>>>>> ab37948 (Initial commit)
           </div>
 
           <button

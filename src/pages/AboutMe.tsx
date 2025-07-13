@@ -54,7 +54,11 @@ const AboutMe = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen py-20 grid-pattern">
+=======
+    <div className="min-h-screen py-20 bg-background text-foreground">
+>>>>>>> ab37948 (Initial commit)
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Header Section */}
@@ -89,7 +93,11 @@ const AboutMe = () => {
           </div>
 
           {/* Profile Card Section */}
+<<<<<<< HEAD
           <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-card rounded-xl border p-8 shadow-sm mb-12">
+=======
+          <Card className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 rounded-xl p-8 shadow-sm mb-12">
+>>>>>>> ab37948 (Initial commit)
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Left: Image */}
               <div className="w-full md:w-1/3 flex justify-center">
@@ -104,7 +112,11 @@ const AboutMe = () => {
 
               {/* Right: Bio */}
               <div className="w-full md:w-2/3">
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
+=======
+                <h2 className="text-2xl font-bold mb-4 text-foreground">Kankati Mokshagna Anurag</h2>
+>>>>>>> ab37948 (Initial commit)
                 <div className="text-muted-foreground space-y-4">
                  <p>
       I'm <strong>Kankati Mokshagna Anurag</strong>, passionate about building secure, intelligent, and autonomous systems. I love working at the intersection of <strong>cybersecurity</strong>, <strong>embedded IoT</strong>, <strong>robotics</strong>, and <strong>AI/ML</strong> to solve real-world problems.
@@ -149,7 +161,11 @@ const AboutMe = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
+=======
+          </Card>
+>>>>>>> ab37948 (Initial commit)
 
           {/* Navigation Buttons */}
           <div className="flex justify-center space-x-4 mt-8">
@@ -166,4 +182,8 @@ const AboutMe = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AboutMe;
+=======
+export default AboutMe;
+>>>>>>> ab37948 (Initial commit)

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ab37948 (Initial commit)
 import { useState, useEffect } from "react";
 import SkillCard from "../components/SkillCard";
 import { skills, Skill } from "../data/skills";
@@ -30,7 +33,11 @@ const Skills = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen pt-24 px-4 pb-16">
+=======
+    <div className="min-h-screen pt-24 px-4 pb-16 bg-background text-foreground">
+>>>>>>> ab37948 (Initial commit)
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className={`text-4xl md:text-5xl font-bold mb-4 text-gradient animate-fade-in`}>
@@ -48,11 +55,19 @@ const Skills = () => {
             <button
               key={category.value}
               onClick={() => setSelectedCategory(category.value)}
+<<<<<<< HEAD
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category.value
                   ? "bg-primary text-white shadow-lg"
                   : "bg-secondary text-foreground hover:bg-accent/20"
               }`}
+=======
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                ${selectedCategory === category.value
+                  ? "bg-primary text-white shadow-lg"
+                  : "bg-secondary text-foreground hover:bg-accent/20 dark:bg-white/10 dark:text-white/80"}
+              `}
+>>>>>>> ab37948 (Initial commit)
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible 
@@ -99,6 +114,7 @@ const Skills = () => {
 };
 
 export default Skills;
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from "react";
 import SkillCard from "../components/SkillCard";
@@ -201,3 +217,5 @@ const Skills = () => {
 
 export default Skills;
 >>>>>>> 51fef60c666af5adf00d02537fe5b6df7cfad5b7
+=======
+>>>>>>> ab37948 (Initial commit)

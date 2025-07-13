@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 
 const achievements = [
   {
+<<<<<<< HEAD
   id: 3,
   title: "Finalist - Hack IITK by C3i Hub, IIT Kanpur",
   date: "February 2025",
@@ -30,6 +31,11 @@ const achievements = [
     id: 1,
     title: "Cyber Secured Champion",
     date: "July 2024",
+=======
+    id: 1,
+    title: "Cyber Secured Champion",
+    date: "July 2023",
+>>>>>>> ab37948 (Initial commit)
     description:
       "Won the Cyber Secured Champion Competition hosted by Cyber Intelligence Global LLP among 500+ participants.",
     icon: <Award className="h-6 w-6 text-green-500" />,
@@ -43,7 +49,11 @@ const achievements = [
   {
     id: 2,
     title: "2nd Place - AVISHKAR Season-2",
+<<<<<<< HEAD
     date: "December 2024",
+=======
+    date: "August 2023",
+>>>>>>> ab37948 (Initial commit)
     description:
       "Secured 2nd place in AVISHKAR Season-2 Hackathon with a prize of ₹1,00,000.",
     icon: <Award className="h-6 w-6 text-yellow-500" />,
@@ -57,7 +67,11 @@ const achievements = [
   {
     id: 3,
     title: "Top 6 - Embedded Systems Exam",
+<<<<<<< HEAD
     date: "November 2024",
+=======
+    date: "October 2023",
+>>>>>>> ab37948 (Initial commit)
     description:
       "Ranked in the Top 6 nationally in the Embedded Systems Scholarship Exam by SENSE Academia.",
     icon: <Award className="h-6 w-6 text-red-500" />,
@@ -71,7 +85,11 @@ const achievements = [
   {
     id: 4,
     title: "Drone Hackathon - AP",
+<<<<<<< HEAD
     date: "November 2024",
+=======
+    date: "November 2023",
+>>>>>>> ab37948 (Initial commit)
     description:
       "Proposed drone-based solutions and delivered impactful presentations at the Andhra Pradesh Drone Hackathon.",
     icon: <Award className="h-6 w-6 text-purple-500" />,
@@ -85,7 +103,11 @@ const achievements = [
   {
     id: 5,
     title: "Volunteer & IoT Speaker - Freedom Fest 2025",
+<<<<<<< HEAD
     date: "March 2025",
+=======
+    date: "April 2025",
+>>>>>>> ab37948 (Initial commit)
     description:
       "Served as a Volunteer and IoT Speaker at Freedom Fest 2025 organized by Swecha. Trained 25 students in IoT using Arduino UNO, NodeMCU (ESP8266), real-time sensors, LIDAR, and Tinkercad simulations. Facilitated cloud-based IoT integration and hands-on learning for embedded systems and automation.",
     icon: <Award className="h-6 w-6 text-pink-500" />,
@@ -135,8 +157,12 @@ const certifications = [
       "Completed the Embedded For Beginners course from NIELIT, covering fundamentals of embedded systems, microcontrollers, and interfacing. Credential ID: OLC 20958.",
     icon: <GraduationCap className="h-6 w-6 text-green-500" />,
     driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
+<<<<<<< HEAD
     driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
     backgroundImage: "",
+=======
+    backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
+>>>>>>> ab37948 (Initial commit)
     tag: "Embedded Systems",
     tags: ["Embedded", "NIELIT", "IoT", "Microcontrollers"],
     category: "certification",
@@ -152,7 +178,11 @@ const certifications = [
   driveLink: "https://drive.google.com/file/d/1a2b3c4d5e6f7g8h9i0j/view?usp=sharing", // <-- replace with actual link
   backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
   tag: "Industry 4.0",
+<<<<<<< HEAD
   tags: ["Industry 4.0", "IIoT", "Smart Manufacturing"],
+=======
+  tags: ["Industry 4.0", "IIoT", "Smart Manufacturing", "Cyber-Physical Systems"],
+>>>>>>> ab37948 (Initial commit)
   category: "certification",
   status: "completed"
 }
@@ -199,6 +229,7 @@ const Achievements = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "competition":
+<<<<<<< HEAD
         return "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800";
       case "hackathon":
         return "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800";
@@ -212,6 +243,21 @@ const Achievements = () => {
         return "bg-indigo-100 text-indigo-700 border-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400 dark:border-indigo-800";
       default:
         return "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-800/30 dark:text-gray-400 dark:border-gray-700";
+=======
+        return "bg-gradient-to-r from-green-500 to-emerald-600 text-white border-green-600 shadow-sm shadow-green-500/20";
+      case "hackathon":
+        return "bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-blue-600 shadow-sm shadow-blue-500/20";
+      case "certification":
+        return "bg-gradient-to-r from-purple-500 to-violet-600 text-white border-purple-600 shadow-sm shadow-purple-500/20";
+      case "scholarship":
+        return "bg-gradient-to-r from-orange-500 to-amber-600 text-white border-orange-600 shadow-sm shadow-orange-500/20";
+      case "teaching":
+        return "bg-gradient-to-r from-pink-500 to-rose-600 text-white border-pink-600 shadow-sm shadow-pink-500/20";
+      case "participation":
+        return "bg-gradient-to-r from-indigo-500 to-blue-600 text-white border-indigo-600 shadow-sm shadow-indigo-500/20";
+      default:
+        return "bg-gradient-to-r from-gray-500 to-slate-600 text-white border-gray-600 shadow-sm shadow-gray-500/20";
+>>>>>>> ab37948 (Initial commit)
     }
   };
 
@@ -226,6 +272,7 @@ const Achievements = () => {
             className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 group"
             style={{ transitionDelay: `${100 * index}ms` }}
           >
+<<<<<<< HEAD
             <div className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-2 h-full flex flex-col">
               {/* Background Image Header */}
               <div
@@ -308,6 +355,91 @@ const Achievements = () => {
                     <span>View Details</span>
                     <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                   </a>
+=======
+            <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+              <div
+                className="bg-white/90 dark:bg-[#18192a]/95 backdrop-blur-xl border border-blue-200 dark:border-[#23234a] rounded-2xl shadow-lg flex flex-col h-full overflow-hidden text-black dark:text-white"
+              >
+                {/* Background Image Header */}
+                <div
+                  className="h-48 relative rounded-t-2xl overflow-hidden"
+                  style={{
+                    backgroundImage: item.backgroundImage || "url('https://images.unsplash.com/photo-1496096265110-f83ad7f96608?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute top-4 right-4 flex gap-2">
+                    <div className="px-3 py-1 rounded-full text-sm font-medium border bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white shadow-md border-white/20">
+                      {item.tag}
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 flex items-center space-x-3">
+                    <div className="p-3 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full shadow-lg">
+                      {item.icon}
+                    </div>
+                    <div className="text-white">
+                      <h3 className="text-lg font-bold leading-tight">{item.title}</h3>
+                      <div className="flex items-center text-sm opacity-90">
+                        <Calendar className="w-3 h-3 mr-1" />
+                        {item.date}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Card Content */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                  {/* Skills Tags */}
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 flex items-center">
+                      <Tag className="w-3 h-3 mr-1" />
+                      Technologies
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {item.tags?.slice(0, isExpanded ? undefined : 3).map((tag: string, i: number) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-900/40 dark:via-indigo-900/40 dark:to-purple-900/40 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-800 shadow-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {!isExpanded && item.tags && item.tags.length > 3 && (
+                        <button
+                          onClick={() => toggleExpanded(item.id)}
+                          className="px-2 py-1 text-xs text-blue-600 dark:text-blue-300 font-medium hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
+                        >
+                          +{item.tags.length - 3} more
+                        </button>
+                      )}
+                    </div>
+                    {isExpanded && item.tags && item.tags.length > 3 && (
+                      <button
+                        onClick={() => toggleExpanded(item.id)}
+                        className="mt-2 flex items-center text-xs text-blue-600 dark:text-blue-300 font-medium hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
+                      >
+                        <ChevronUp className="w-3 h-3 mr-1" />
+                        Show less
+                      </button>
+                    )}
+                  </div>
+                  {/* View Button */}
+                  <div className="mt-auto">
+                    <a
+                      href={item.driveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white px-4 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:scale-105 group/btn border border-blue-700/20"
+                    >
+                      <span>View Details</span>
+                      <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
+                  </div>
+>>>>>>> ab37948 (Initial commit)
                 </div>
               </div>
             </div>
@@ -319,6 +451,7 @@ const Achievements = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+<<<<<<< HEAD
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-20 dark:opacity-10"
@@ -331,6 +464,9 @@ const Achievements = () => {
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-950/20 dark:via-transparent dark:to-purple-950/20" />
 
+=======
+      {/* Removed pattern and gradient overlays for full darkness */}
+>>>>>>> ab37948 (Initial commit)
       <div className="container mx-auto px-4 py-20 relative">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
@@ -338,17 +474,27 @@ const Achievements = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-8 shadow-lg shadow-blue-500/25">
               <Award className="w-10 h-10 text-white" />
             </div>
+<<<<<<< HEAD
             <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 dark:from-gray-100 dark:via-blue-100 dark:to-purple-100 bg-clip-text text-transparent mb-6">
+=======
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 dark:from-blue-400 dark:via-indigo-300 dark:to-purple-300 bg-clip-text text-transparent mb-6">
+>>>>>>> ab37948 (Initial commit)
               Achievements & Certifications
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A showcase of my accomplishments, certifications, and recognitions in technology, cybersecurity, and innovation.
             </p>
           </div>
+<<<<<<< HEAD
 
           {/* Enhanced Tabs */}
           <div className="flex justify-center mb-16">
             <div className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl p-2 shadow-xl">
+=======
+          {/* Enhanced Tabs */}
+          <div className="flex justify-center mb-16">
+            <div className="bg-white/60 dark:bg-[#23234a]/90 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl p-2 shadow-xl">
+>>>>>>> ab37948 (Initial commit)
               <div className="flex gap-2">
                 <Button
                   variant={activeTab === "achievements" ? "default" : "ghost"}
@@ -356,7 +502,11 @@ const Achievements = () => {
                   className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === "achievements" 
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25" 
+<<<<<<< HEAD
                       : "hover:bg-gray-100 dark:hover:bg-gray-800"
+=======
+                      : "hover:bg-gray-100 dark:hover:bg-[#23234a]"
+>>>>>>> ab37948 (Initial commit)
                   }`}
                 >
                   <Award className="w-4 h-4 mr-2" />
@@ -368,7 +518,11 @@ const Achievements = () => {
                   className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === "certifications" 
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25" 
+<<<<<<< HEAD
                       : "hover:bg-gray-100 dark:hover:bg-gray-800"
+=======
+                      : "hover:bg-gray-100 dark:hover:bg-[#23234a]"
+>>>>>>> ab37948 (Initial commit)
                   }`}
                 >
                   <GraduationCap className="w-4 h-4 mr-2" />
@@ -377,16 +531,25 @@ const Achievements = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab37948 (Initial commit)
           {/* Content */}
           <div key={activeTab}>
             {activeTab === "achievements" && renderCards(achievements)}
             {activeTab === "certifications" && renderCards(certifications)}
           </div>
+<<<<<<< HEAD
 
           {/* Call to Action */}
           <div className="text-center mt-20">
             <div className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+=======
+          {/* Call to Action */}
+          <div className="text-center mt-20">
+            <div className="bg-white/60 dark:bg-[#23234a]/90 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+>>>>>>> ab37948 (Initial commit)
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Let's Collaborate
               </h3>

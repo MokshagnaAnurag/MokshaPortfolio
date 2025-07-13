@@ -19,4 +19,11 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+<<<<<<< HEAD
 }));
+=======
+  optimizeDeps: {
+    include: ['react-chatbot-kit']
+  }
+}));
+>>>>>>> ab37948 (Initial commit)
