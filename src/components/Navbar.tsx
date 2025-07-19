@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 <<<<<<< HEAD
 import { NavLink } from "react-router-dom";
@@ -217,6 +218,99 @@ const Navbar = () => {
         />
       </div>
 >>>>>>> ab37948 (Initial commit)
+=======
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Home, User, Briefcase, GraduationCap, Code, Folder, Award, Mail, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
+import { cn } from "@/lib/utils";
+
+const navTabs = [
+  { name: "Home", url: "/", icon: Home },
+  { name: "About Me", url: "/about", icon: User },
+  { name: "Experience", url: "/experience", icon: Briefcase },
+  { name: "Education", url: "/education", icon: GraduationCap },
+  { name: "Skills", url: "/skills", icon: Code },
+  { name: "Projects", url: "/projects", icon: Folder },
+  { name: "Achievements", url: "/achievements", icon: Award },
+  { name: "Contact", url: "/contact", icon: Mail },
+];
+
+const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+  const [activeTab, setActiveTab] = useState(navTabs[0].name);
+  const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleTabClick = (item) => {
+    setActiveTab(item.name);
+    navigate(item.url);
+  };
+
+  const handleThemeToggle = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  return (
+    <div className="fixed top-0 left-1/2 -translate-x-1/2 z-50 mt-6">
+      <div className="flex items-center gap-1 md:gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-2 md:py-1 md:px-4 rounded-full shadow-lg">
+        {navTabs.map((item) => {
+          const Icon = item.icon;
+          const isActive = activeTab === item.name;
+          return (
+            <button
+              key={item.name}
+              onClick={() => handleTabClick(item)}
+              className={cn(
+                "relative cursor-pointer text-xs md:text-sm font-semibold px-2 md:px-6 py-1 md:py-2 rounded-full transition-colors",
+                "text-foreground/80 hover:text-primary",
+                isActive && "bg-muted text-primary"
+              )}
+            >
+              <span className="hidden md:inline whitespace-nowrap">{item.name}</span>
+              <span className="md:hidden">
+                <Icon size={16} strokeWidth={2.2} />
+              </span>
+              {isActive && (
+                <motion.div
+                  layoutId="lamp"
+                  className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
+                  initial={false}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 30,
+                  }}
+                >
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
+                    <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
+                    <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1" />
+                    <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
+                  </div>
+                </motion.div>
+              )}
+            </button>
+          );
+        })}
+        {/* Theme Toggle */}
+        <button
+          onClick={handleThemeToggle}
+          className="relative cursor-pointer text-xs md:text-sm font-semibold px-2 md:px-6 py-1 md:py-2 rounded-full transition-colors text-foreground/80 hover:text-primary"
+        >
+          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
+      </div>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     </div>
   );
 };

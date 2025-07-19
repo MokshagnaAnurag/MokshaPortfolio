@@ -1,15 +1,53 @@
+<<<<<<< HEAD
 // src/components/Layout.tsx
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Chatbot from "./Chatbot"; // ✅ Import Chatbot
+=======
+import Chatbot from "./Chatbot";
+import { ExpandableTabs } from "@/components/ui/expandable-tabs";
+import { Home, User, Briefcase, GraduationCap, Code, Folder, Award, Mail } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+function MobileTabs() {
+  const navigate = useNavigate();
+  const navTabs = [
+    { title: "Home", icon: Home },
+    { title: "About Me", icon: User },
+    { title: "Experience", icon: Briefcase },
+    { title: "Education", icon: GraduationCap },
+    { title: "Skills", icon: Code },
+    { title: "Projects", icon: Folder },
+    { title: "Achievements", icon: Award },
+    { title: "Contact", icon: Mail },
+  ];
+  const tabRoutes = [
+    "/", "/about", "/experience", "/education", "/skills", "/projects", "/achievements", "/contact"
+  ];
+  return (
+    <div className="fixed bottom-0 left-0 w-full z-50 bg-white/90 dark:bg-[#181A20]/90 border-t border-gray-200 dark:border-white/10 backdrop-blur-md block md:hidden">
+      <ExpandableTabs
+        tabs={navTabs}
+        activeColor="text-blue-500"
+        onChange={index => { if (index !== null) navigate(tabRoutes[index]); }}
+        className="bg-transparent border-none shadow-none justify-center"
+      />
+    </div>
+  );
+}
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
 const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+<<<<<<< HEAD
       
       <main className="flex-1">
         <Outlet />
@@ -48,6 +86,14 @@ const Layout = () => {
       <Footer />
       <Chatbot />
 >>>>>>> ab37948 (Initial commit)
+=======
+      <main className="flex-1 pt-20">
+        <Outlet />
+      </main>
+      <Chatbot />
+      <MobileTabs />
+      <Footer />
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     </div>
   );
 };

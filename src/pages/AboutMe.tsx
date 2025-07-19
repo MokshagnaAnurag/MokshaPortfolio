@@ -55,12 +55,28 @@ const AboutMe = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen py-20 grid-pattern">
 =======
     <div className="min-h-screen py-20 bg-background text-foreground">
 >>>>>>> ab37948 (Initial commit)
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
+=======
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-20 dark:opacity-10"
+        style={{
+          backgroundImage: `radial-gradient(circle at 25px 25px, hsl(var(--muted)) 2px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}
+      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/50 dark:from-blue-950/30 dark:via-indigo-950/20 dark:to-purple-950/30" />
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto relative">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="mx-auto mb-6 h-24 w-24 rounded-full overflow-hidden border-4 border-primary shadow-md">
@@ -94,10 +110,14 @@ const AboutMe = () => {
 
           {/* Profile Card Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-card rounded-xl border p-8 shadow-sm mb-12">
 =======
           <Card className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 rounded-xl p-8 shadow-sm mb-12">
 >>>>>>> ab37948 (Initial commit)
+=======
+          <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 bg-card rounded-xl border p-8 shadow-sm mb-12">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* Left: Image */}
               <div className="w-full md:w-1/3 flex justify-center">
@@ -113,10 +133,14 @@ const AboutMe = () => {
               {/* Right: Bio */}
               <div className="w-full md:w-2/3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
 =======
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Kankati Mokshagna Anurag</h2>
 >>>>>>> ab37948 (Initial commit)
+=======
+                <h2 className="text-2xl font-bold mb-4">Kankati Mokshagna Anurag</h2>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
                 <div className="text-muted-foreground space-y-4">
                  <p>
       I'm <strong>Kankati Mokshagna Anurag</strong>, passionate about building secure, intelligent, and autonomous systems. I love working at the intersection of <strong>cybersecurity</strong>, <strong>embedded IoT</strong>, <strong>robotics</strong>, and <strong>AI/ML</strong> to solve real-world problems.
@@ -162,6 +186,7 @@ const AboutMe = () => {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
 =======
           </Card>
@@ -169,6 +194,12 @@ const AboutMe = () => {
 
           {/* Navigation Buttons */}
           <div className="flex justify-center space-x-4 mt-8">
+=======
+          </div>
+
+          {/* Navigation Buttons */}
+          <div className="flex justify-center space-x-4 mt-8 mb-16">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
             <Button asChild size="lg">
               <Link to="/experience">View Experience</Link>
             </Button>
@@ -183,7 +214,11 @@ const AboutMe = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AboutMe;
 =======
 export default AboutMe;
 >>>>>>> ab37948 (Initial commit)
+=======
+export default AboutMe;
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)

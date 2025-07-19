@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 const achievements = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   id: 3,
   title: "Finalist - Hack IITK by C3i Hub, IIT Kanpur",
   date: "February 2025",
@@ -36,6 +37,11 @@ const achievements = [
     title: "Cyber Secured Champion",
     date: "July 2023",
 >>>>>>> ab37948 (Initial commit)
+=======
+    id: 1,
+    title: "Cyber Secured Champion",
+    date: "July 2023",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     description:
       "Won the Cyber Secured Champion Competition hosted by Cyber Intelligence Global LLP among 500+ participants.",
     icon: <Award className="h-6 w-6 text-green-500" />,
@@ -50,10 +56,14 @@ const achievements = [
     id: 2,
     title: "2nd Place - AVISHKAR Season-2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     date: "December 2024",
 =======
     date: "August 2023",
 >>>>>>> ab37948 (Initial commit)
+=======
+    date: "August 2023",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     description:
       "Secured 2nd place in AVISHKAR Season-2 Hackathon with a prize of ₹1,00,000.",
     icon: <Award className="h-6 w-6 text-yellow-500" />,
@@ -68,10 +78,14 @@ const achievements = [
     id: 3,
     title: "Top 6 - Embedded Systems Exam",
 <<<<<<< HEAD
+<<<<<<< HEAD
     date: "November 2024",
 =======
     date: "October 2023",
 >>>>>>> ab37948 (Initial commit)
+=======
+    date: "October 2023",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     description:
       "Ranked in the Top 6 nationally in the Embedded Systems Scholarship Exam by SENSE Academia.",
     icon: <Award className="h-6 w-6 text-red-500" />,
@@ -86,10 +100,14 @@ const achievements = [
     id: 4,
     title: "Drone Hackathon - AP",
 <<<<<<< HEAD
+<<<<<<< HEAD
     date: "November 2024",
 =======
     date: "November 2023",
 >>>>>>> ab37948 (Initial commit)
+=======
+    date: "November 2023",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     description:
       "Proposed drone-based solutions and delivered impactful presentations at the Andhra Pradesh Drone Hackathon.",
     icon: <Award className="h-6 w-6 text-purple-500" />,
@@ -104,10 +122,14 @@ const achievements = [
     id: 5,
     title: "Volunteer & IoT Speaker - Freedom Fest 2025",
 <<<<<<< HEAD
+<<<<<<< HEAD
     date: "March 2025",
 =======
     date: "April 2025",
 >>>>>>> ab37948 (Initial commit)
+=======
+    date: "April 2025",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     description:
       "Served as a Volunteer and IoT Speaker at Freedom Fest 2025 organized by Swecha. Trained 25 students in IoT using Arduino UNO, NodeMCU (ESP8266), real-time sensors, LIDAR, and Tinkercad simulations. Facilitated cloud-based IoT integration and hands-on learning for embedded systems and automation.",
     icon: <Award className="h-6 w-6 text-pink-500" />,
@@ -158,11 +180,15 @@ const certifications = [
     icon: <GraduationCap className="h-6 w-6 text-green-500" />,
     driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
 <<<<<<< HEAD
+<<<<<<< HEAD
     driveLink: "https://drive.google.com/file/d/10wrOmLbETQkml0__fOLIg-LwJJz62M36/view?usp=sharing",
     backgroundImage: "",
 =======
     backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
 >>>>>>> ab37948 (Initial commit)
+=======
+    backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     tag: "Embedded Systems",
     tags: ["Embedded", "NIELIT", "IoT", "Microcontrollers"],
     category: "certification",
@@ -179,10 +205,14 @@ const certifications = [
   backgroundImage: "url('https://media.licdn.com/dms/image/D4D22AQHq9u6G0Nhyfw/feedshare-shrink_800/0/1685079401784?e=2147483647&v=beta&t=xnFXgoAqAnuLX8SkZOMMbIBdOs_7TYk6aeyL7ZldYo4')",
   tag: "Industry 4.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
   tags: ["Industry 4.0", "IIoT", "Smart Manufacturing"],
 =======
   tags: ["Industry 4.0", "IIoT", "Smart Manufacturing", "Cyber-Physical Systems"],
 >>>>>>> ab37948 (Initial commit)
+=======
+  tags: ["Industry 4.0", "IIoT", "Smart Manufacturing", "Cyber-Physical Systems"],
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
   category: "certification",
   status: "completed"
 }
@@ -230,6 +260,7 @@ const Achievements = () => {
     switch (category) {
       case "competition":
 <<<<<<< HEAD
+<<<<<<< HEAD
         return "bg-green-100 text-green-700 border-green-200 dark:bg-green-900/30 dark:text-green-400 dark:border-green-800";
       case "hackathon":
         return "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800";
@@ -244,6 +275,8 @@ const Achievements = () => {
       default:
         return "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-800/30 dark:text-gray-400 dark:border-gray-700";
 =======
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
         return "bg-gradient-to-r from-green-500 to-emerald-600 text-white border-green-600 shadow-sm shadow-green-500/20";
       case "hackathon":
         return "bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-blue-600 shadow-sm shadow-blue-500/20";
@@ -257,6 +290,7 @@ const Achievements = () => {
         return "bg-gradient-to-r from-indigo-500 to-blue-600 text-white border-indigo-600 shadow-sm shadow-indigo-500/20";
       default:
         return "bg-gradient-to-r from-gray-500 to-slate-600 text-white border-gray-600 shadow-sm shadow-gray-500/20";
+<<<<<<< HEAD
 >>>>>>> ab37948 (Initial commit)
     }
   };
@@ -452,6 +486,13 @@ const Achievements = () => {
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
 <<<<<<< HEAD
+=======
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-20 dark:opacity-10"
@@ -462,6 +503,7 @@ const Achievements = () => {
       />
       
       {/* Gradient Overlay */}
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-950/20 dark:via-transparent dark:to-purple-950/20" />
 
 =======
@@ -560,6 +602,126 @@ const Achievements = () => {
                 Get In Touch
               </button>
             </div>
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-transparent to-teal-50/50 dark:from-emerald-950/20 dark:via-transparent dark:to-teal-950/20" />
+
+      <div className="container mx-auto px-4 py-20 relative">
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-white">Achievements & Certifications</h1>
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <Button
+              variant={activeTab === "achievements" ? "default" : "outline"}
+              onClick={() => setActiveTab("achievements")}
+            >
+              Achievements
+            </Button>
+            <Button
+              variant={activeTab === "certifications" ? "default" : "outline"}
+              onClick={() => setActiveTab("certifications")}
+            >
+              Certifications
+            </Button>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {(activeTab === "achievements" ? achievements : certifications).map((item, index) => {
+            const isExpanded = expandedItems.includes(item.id);
+            const visibleTags = isExpanded ? item.tags : item.tags?.slice(0, 3);
+            const extraTagCount = item.tags && item.tags.length > 3 ? item.tags.length - 3 : 0;
+            // Tag color map (all lowercase for matching)
+            const tagColors: Record<string, string> = {
+              hackathon: "bg-blue-800 text-blue-200",
+              cybersecurity: "bg-green-800 text-green-200",
+              "embedded systems": "bg-purple-800 text-purple-200",
+              "ai & nlp": "bg-pink-800 text-pink-200",
+              aerospace: "bg-indigo-800 text-indigo-200",
+              "iot & education": "bg-yellow-800 text-yellow-200",
+              "industry 4.0": "bg-orange-800 text-orange-200",
+              participation: "bg-indigo-800 text-indigo-200",
+              certification: "bg-purple-800 text-purple-200",
+            };
+            const tagKey = (item.tag || "").toLocaleLowerCase();
+            const tagClass = tagColors[tagKey] || "bg-blue-800 text-blue-200";
+            return (
+              <div
+                key={item.id}
+                className="bg-white text-gray-900 dark:bg-[#181A20] dark:text-white border border-gray-200 dark:border-white/10 rounded-2xl shadow-lg flex flex-col h-full p-0"
+              >
+                {/* Header: Icon, Tag, Title, Date */}
+                <div className="flex flex-col gap-2 px-6 pt-6 pb-2">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-600">
+                      {item.icon}
+                    </div>
+                    <span className={`px-3 py-0.5 rounded-full text-xs font-semibold ${tagClass}`}>{item.tag}</span>
+                  </div>
+                  <div className="text-lg font-bold text-gray-900 dark:text-white leading-tight mt-1">{item.title}</div>
+                  <div className="flex items-center text-sm text-gray-700 dark:text-gray-300">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {item.date}
+                  </div>
+                </div>
+                {/* Description */}
+                <div className="px-6 pb-2">
+                  <p className="text-gray-800 dark:text-gray-200 text-sm mb-4">{item.description}</p>
+                  {/* Technologies */}
+                  <div className="mb-2">
+                    <div className="flex items-center gap-2 text-xs font-semibold text-gray-700 dark:text-gray-400 uppercase mb-1">
+                      <Tag className="w-3 h-3" /> TECHNOLOGIES
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {visibleTags && visibleTags.map((tag: string, i: number) => (
+                        <span key={i} className="bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 px-2 py-1 rounded-full text-xs font-medium">{tag}</span>
+                      ))}
+                      {!isExpanded && extraTagCount > 0 && (
+                        <button
+                          onClick={() => toggleExpanded(item.id)}
+                          className="text-xs text-blue-600 dark:text-blue-400 underline focus:outline-none"
+                        >
+                          +{extraTagCount} more
+                        </button>
+                      )}
+                      {isExpanded && extraTagCount > 0 && (
+                        <button
+                          onClick={() => toggleExpanded(item.id)}
+                          className="text-xs text-blue-600 dark:text-blue-400 underline focus:outline-none"
+                        >
+                          Show less
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                {/* Button */}
+                <div className="mt-auto px-6 pb-6 pt-2">
+                  {item.driveLink && (
+                    <a
+                      href={item.driveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-xl font-semibold text-center hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105"
+                    >
+                      View Details <ExternalLink className="inline w-4 h-4 ml-1 align-text-bottom" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {/* Call to Action */}
+        <div className="text-center mt-20">
+          <div className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Let's Collaborate
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Interested in working together or learning more about my achievements? I'd love to connect!
+            </p>
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
+              Get In Touch
+            </button>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
           </div>
         </div>
       </div>

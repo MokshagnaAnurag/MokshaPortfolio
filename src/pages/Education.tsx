@@ -121,32 +121,45 @@ const Education = () => {
     switch (status) {
       case "ongoing":
 <<<<<<< HEAD
+<<<<<<< HEAD
         return "bg-emerald-100 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400 dark:border-emerald-800";
       case "completed":
         return "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-900/30 dark:text-blue-400 dark:border-blue-800";
       default:
         return "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-800/30 dark:text-gray-400 dark:border-gray-700";
 =======
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
         return "bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-blue-600 shadow-sm shadow-blue-500/20";
       case "completed":
         return "bg-gradient-to-r from-purple-500 to-violet-600 text-white border-purple-600 shadow-sm shadow-purple-500/20";
       default:
         return "bg-gradient-to-r from-gray-500 to-slate-600 text-white border-gray-600 shadow-sm shadow-gray-500/20";
+<<<<<<< HEAD
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     }
   };
 
   const getTypeColor = (type: string) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return "bg-purple-100 text-purple-700 border-purple-200 dark:bg-purple-900/30 dark:text-purple-400 dark:border-purple-800";
 =======
     return "bg-gradient-to-r from-teal-500 to-emerald-600 text-white border-teal-600 shadow-sm shadow-teal-500/20";
 >>>>>>> ab37948 (Initial commit)
+=======
+    return "bg-gradient-to-r from-teal-500 to-emerald-600 text-white border-teal-600 shadow-sm shadow-teal-500/20";
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
   };
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-20 dark:opacity-10"
@@ -157,26 +170,37 @@ const Education = () => {
       />
       
       {/* Gradient Overlay */}
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 dark:from-blue-950/20 dark:via-transparent dark:to-purple-950/20" />
 
 =======
       {/* Removed pattern and gradient overlays for full darkness */}
 >>>>>>> ab37948 (Initial commit)
+=======
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/50 dark:from-blue-950/30 dark:via-indigo-950/20 dark:to-purple-950/30" />
+
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-6 sm:mb-8 shadow-lg shadow-blue-500/25">
               <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 dark:from-gray-100 dark:via-blue-100 dark:to-purple-100 bg-clip-text text-transparent mb-4 sm:mb-6 px-4">
 =======
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
             <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full mb-6 sm:mb-8 shadow-lg shadow-blue-500/25">
               <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 dark:from-blue-400 dark:via-indigo-300 dark:to-blue-200 bg-clip-text text-transparent mb-4 sm:mb-6 px-4">
+<<<<<<< HEAD
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
               Educational Journey
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
@@ -188,10 +212,14 @@ const Education = () => {
           <div className="relative">
             {/* Timeline Line - Hidden on mobile, visible on larger screens */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="absolute left-8 lg:left-1/2 lg:transform lg:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 hidden md:block rounded-full shadow-lg"></div>
 =======
             <div className="absolute left-8 lg:left-1/2 lg:transform lg:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-indigo-500 to-blue-400 hidden md:block rounded-full shadow-lg"></div>
 >>>>>>> ab37948 (Initial commit)
+=======
+            <div className="absolute left-8 lg:left-1/2 lg:transform lg:-translate-x-px top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-indigo-500 to-blue-400 hidden md:block rounded-full shadow-lg"></div>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
             <div className="space-y-8 sm:space-y-12 lg:space-y-16">
               {educationItems.map((item, index) => {
@@ -209,16 +237,22 @@ const Education = () => {
                   >
                     {/* Timeline Node - Hidden on mobile */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="absolute left-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-8 h-8 bg-white dark:bg-gray-800 rounded-full border-4 border-blue-400 shadow-lg hidden md:flex items-center justify-center group-hover:scale-125 group-hover:border-purple-500 transition-all duration-300 z-10">
                       <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
 =======
                     <div className="absolute left-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-8 h-8 bg-white dark:bg-gray-800 rounded-full border-4 border-blue-500 shadow-lg hidden md:flex items-center justify-center group-hover:scale-125 group-hover:border-indigo-500 transition-all duration-300 z-10">
                       <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
 >>>>>>> ab37948 (Initial commit)
+=======
+                    <div className="absolute left-6 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-8 h-8 bg-white dark:bg-gray-800 rounded-full border-4 border-blue-500 shadow-lg hidden md:flex items-center justify-center group-hover:scale-125 group-hover:border-indigo-500 transition-all duration-300 z-10">
+                      <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full animate-pulse"></div>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
                     </div>
 
                     {/* Education Card */}
                     <div className={`w-full lg:w-5/12 ${isEven ? 'lg:mr-auto lg:pr-8' : 'lg:ml-auto lg:pl-8'} ml-0 sm:ml-16 md:ml-20 lg:ml-0`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <div className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden group-hover:-translate-y-1 sm:group-hover:-translate-y-2">
                         {/* Card Header */}
@@ -228,6 +262,11 @@ const Education = () => {
                         {/* Card Header */}
                         <div className="bg-gradient-to-r from-blue-50/80 via-indigo-50/60 to-purple-50/80 dark:from-blue-950/50 dark:via-indigo-950/40 dark:to-purple-950/50 p-4 sm:p-6 border-b border-gray-100 dark:border-gray-800">
 >>>>>>> ab37948 (Initial commit)
+=======
+                      <div className="bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-500 overflow-hidden group-hover:-translate-y-1 sm:group-hover:-translate-y-2">
+                        {/* Card Header */}
+                        <div className="bg-gradient-to-r from-blue-50/80 via-indigo-50/60 to-purple-50/80 dark:from-blue-950/50 dark:via-indigo-950/40 dark:to-purple-950/50 p-4 sm:p-6 border-b border-gray-100 dark:border-gray-800">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
                           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4">
                             <div className="flex items-center space-x-3 sm:space-x-4">
                               {item.logo && (
@@ -290,10 +329,14 @@ const Education = () => {
                                 <span
                                   key={i}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   className="px-2 sm:px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/50 dark:to-purple-950/50 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-medium border border-blue-200 dark:border-blue-800 hover:shadow-md transition-all hover:scale-105 active:scale-95"
 =======
                                   className="px-2 sm:px-3 py-1 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-900/50 dark:via-indigo-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-medium border border-blue-200 dark:border-blue-800 hover:shadow-md transition-all hover:scale-105 hover:bg-gradient-to-r hover:from-blue-200 hover:via-indigo-200 hover:to-purple-200 dark:hover:from-blue-800/50 dark:hover:via-indigo-800/50 dark:hover:to-purple-800/50 active:scale-95"
 >>>>>>> ab37948 (Initial commit)
+=======
+                                  className="px-2 sm:px-3 py-1 bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 dark:from-blue-900/50 dark:via-indigo-900/50 dark:to-purple-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs sm:text-sm font-medium border border-blue-200 dark:border-blue-800 hover:shadow-md transition-all hover:scale-105 hover:bg-gradient-to-r hover:from-blue-200 hover:via-indigo-200 hover:to-purple-200 dark:hover:from-blue-800/50 dark:hover:via-indigo-800/50 dark:hover:to-purple-800/50 active:scale-95"
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
                                 >
                                   {skill}
                                 </span>
@@ -372,7 +415,11 @@ const Education = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Education;
 =======
 export default Education;
 >>>>>>> ab37948 (Initial commit)
+=======
+export default Education;
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)

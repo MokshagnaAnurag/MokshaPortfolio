@@ -10,6 +10,7 @@ const Card = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
       "rounded-lg border bg-card text-card-foreground shadow-sm",
 =======
       // Use semi-transparent backgrounds for both themes
@@ -17,6 +18,9 @@ const Card = React.forwardRef<
       "bg-white/80 dark:bg-black/70",
       "text-foreground",
 >>>>>>> ab37948 (Initial commit)
+=======
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       className
     )}
     {...props}
@@ -44,10 +48,14 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
       "text-2xl font-semibold leading-none tracking-tight",
 =======
       "text-2xl font-semibold leading-none tracking-tight text-foreground",
 >>>>>>> ab37948 (Initial commit)
+=======
+      "text-2xl font-semibold leading-none tracking-tight",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       className
     )}
     {...props}

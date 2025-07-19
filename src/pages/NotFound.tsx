@@ -8,10 +8,14 @@ const NotFound = () => {
   
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center">
 =======
     <div className="min-h-screen flex items-center justify-center bg-background text-foreground">
 >>>>>>> ab37948 (Initial commit)
+=======
+    <div className="min-h-screen flex items-center justify-center">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       <div className="text-center space-y-6 p-6">
         <div className="text-6xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
           404

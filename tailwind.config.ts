@@ -27,6 +27,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
@@ -63,6 +66,7 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+<<<<<<< HEAD
 =======
 					DEFAULT: '#3b82f6', // blue-600
 					foreground: '#fff',
@@ -101,6 +105,8 @@ export default {
 					border: '#3b82f6',
 					ring: '#3b82f6',
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 				},
 				tech: {
 					'iot': '#4e7de9',
@@ -108,10 +114,14 @@ export default {
 					'robotics': '#6bcb77',
 					'ai': '#9b5de5',
 <<<<<<< HEAD
+<<<<<<< HEAD
 					'cybersec': '#f15bb5'
 =======
 					'cybersec': '#f15bb5',
 >>>>>>> ab37948 (Initial commit)
+=======
+					'cybersec': '#f15bb5'
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 				},
 			},
 			borderRadius: {
@@ -144,6 +154,7 @@ export default {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				},
 				'spotlight': {
@@ -156,6 +167,8 @@ export default {
 						transform: 'translate(-50%,-40%) scale(1)',
 					},
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 				}
 			},
 			animation: {
@@ -165,11 +178,15 @@ export default {
 				'pulse-slow': 'pulse-slow 4s ease-in-out infinite',
 				'gradient-x': 'gradient-x 15s ease infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 				'spin-slow': 'spin-slow 12s linear infinite'
 =======
 				'spin-slow': 'spin-slow 12s linear infinite',
 				'spotlight': 'spotlight 2s ease .75s 1 forwards'
 >>>>>>> ab37948 (Initial commit)
+=======
+				'spin-slow': 'spin-slow 12s linear infinite'
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 			}
 		}
 	},

@@ -49,7 +49,11 @@ const SkillDetailPanel: React.FC<SkillDetailPanelProps> = ({ skill, onClose }) =
   return (
     <div 
       ref={panelRef}
+<<<<<<< HEAD
       className={`skills-detail-panel fixed right-8 top-24 w-96 rounded-lg p-6 z-50 border shadow-lg backdrop-blur-md bg-white/80 dark:bg-black/80 text-black dark:text-white ${
+=======
+      className={`skills-detail-panel fixed right-8 top-24 w-96 rounded-lg p-6 z-50 ${
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
         animation === 'entering' ? 'animate-slide-in-right' : 
         animation === 'exiting' ? 'animate-slide-out-right' : ''
       }`}

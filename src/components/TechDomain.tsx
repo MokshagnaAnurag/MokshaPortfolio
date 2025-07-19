@@ -1,9 +1,12 @@
 
 import { cn } from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Card } from "@/components/ui/card";
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
 interface TechDomainProps {
   title: string;
@@ -22,6 +25,9 @@ const TechDomain = ({
 }: TechDomainProps) => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     <div 
       className={cn(
         "relative rounded-xl border p-6 shadow-sm transition-all hover:shadow-md",
@@ -37,6 +43,7 @@ const TechDomain = ({
       </div>
       <p className="text-muted-foreground">{description}</p>
     </div>
+<<<<<<< HEAD
 =======
     <Card 
       className={cn(
@@ -58,6 +65,8 @@ const TechDomain = ({
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-white/5 to-transparent rounded-xl transition-opacity duration-500 pointer-events-none"></div>
     </Card>
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
   );
 };
 

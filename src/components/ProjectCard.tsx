@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Card } from "@/components/ui/card";
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
 interface ProjectCardProps {
   title: string;
@@ -32,6 +35,9 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     <div className={cn(
       "tech-card group overflow-hidden",
       className
@@ -91,6 +97,7 @@ const ProjectCard = ({
           </Button>
         )}
       </div>
+<<<<<<< HEAD
 =======
     <div
       className={cn(
@@ -178,6 +185,8 @@ const ProjectCard = ({
         </div>
       </Card>
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     </div>
   );
 };

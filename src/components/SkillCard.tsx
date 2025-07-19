@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { Skill } from "../data/skills";
 =======
@@ -119,6 +120,8 @@ const SkillIcon = ({ iconName }: { iconName: string }) => {
 <<<<<<< HEAD
 export default SkillCard;
 =======
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 import { useState, useEffect } from "react";
 import { Skill } from "../data/skills";
 
@@ -218,8 +221,12 @@ const SkillIcon = ({ iconName }: { iconName: string }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SkillCard;
 >>>>>>> 51fef60c666af5adf00d02537fe5b6df7cfad5b7
 =======
 export default SkillCard;
 >>>>>>> ab37948 (Initial commit)
+=======
+export default SkillCard;
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 import { useState, useEffect } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
@@ -29,7 +33,11 @@ const Projects = () => {
       image: "https://thumbs.dreamstime.com/z/self-driving-delivery-bot-travels-along-urban-path-ai-generated-autonomous-delivery-robot-navigating-city-sidewalk-dusk-313006773.jpg", // Updated image for Robotics
       tags: ["ROS", "Python", "LiDAR", "SLAM"],
       links: {
+<<<<<<< HEAD
         github: "https://github.com/MokshagnaAnurag/Self_driving_bot.git",
+=======
+        github: "https://github.com",
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       }
     },
     {
@@ -108,6 +116,7 @@ const Projects = () => {
         links: {
           github: "https://github.com/MokshagnaAnurag/SEMANTIC-SEGMENTATION-IN-AUTONOMOUS-VEHICLES.git",
         }
+<<<<<<< HEAD
       },
     {
   id: 9,
@@ -121,6 +130,9 @@ const Projects = () => {
   }
 }
 
+=======
+      }
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
       
   ];
   
@@ -159,8 +171,23 @@ const Projects = () => {
   }, [filteredProjects]);
   
   return (
+<<<<<<< HEAD
     <div className="min-h-screen py-20 grid-pattern">
       <div className="container mx-auto px-4">
+=======
+    <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-20 dark:opacity-10"
+        style={{
+          backgroundImage: `radial-gradient(circle at 25px 25px, hsl(var(--muted)) 2px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}
+      />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-indigo-50/30 to-purple-50/50 dark:from-blue-950/30 dark:via-indigo-950/20 dark:to-purple-950/30" />
+      <div className="container mx-auto px-4 relative">
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h1 className="text-4xl font-bold mb-6">My Projects</h1>
           <p className="text-lg text-muted-foreground mb-8">
@@ -212,6 +239,7 @@ const Projects = () => {
 };
 
 export default Projects;
+<<<<<<< HEAD
 =======
 
   import { useState, useEffect } from "react";
@@ -459,3 +487,5 @@ export default Projects;
 
   export default Projects;
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)

@@ -114,6 +114,7 @@ export const chatbotResponses: ChatbotResponse[] = [
       "You can download Moksha's resume from the Resume page. It includes his education, skills, and work experience.",
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     keywords: ["hello", "hi", "hey", "greet"],
     response: "Hello! Welcome to Mokshagna Anurag's portfolio. How can I assist you today?",
@@ -213,6 +214,10 @@ Visit the Skills page for a full overview.`,
 ];
 
 >>>>>>> ab37948 (Initial commit)
+=======
+];
+
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 export const fallbackResponses = [
   "I'm not sure I understand. Can you rephrase your question?",
   "I don't have that info yet. Try asking something about Moksha's skills or projects!",

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 import * as React from "react"
 
 const MOBILE_BREAKPOINT = 768
@@ -17,6 +20,7 @@ export function useIsMobile() {
   }, [])
 
   return !!isMobile
+<<<<<<< HEAD
 =======
 import { useEffect, useState } from "react"
 
@@ -45,4 +49,6 @@ export function useIsMobile(): boolean {
 
   return isMobile
 >>>>>>> ab37948 (Initial commit)
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 }

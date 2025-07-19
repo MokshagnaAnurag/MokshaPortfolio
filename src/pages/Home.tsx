@@ -12,7 +12,10 @@ import {
 } from "lucide-react";
 import ParticleBackground from "@/components/ParticleBackground";
 import TechDomain from "@/components/TechDomain";
+<<<<<<< HEAD
 import { Hero3D } from "@/components/ui/hero-3d";
+=======
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
 // Custom hook for typing effect
 const useTypingEffect = (text: string, speed: number = 50) => {
@@ -20,7 +23,11 @@ const useTypingEffect = (text: string, speed: number = 50) => {
 
   useEffect(() => {
     let index = 0;
+<<<<<<< HEAD
     setDisplayedText("");
+=======
+    setDisplayedText(""); // Reset text on update
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
     const interval = setInterval(() => {
       setDisplayedText((prev) => prev + text.charAt(index));
       index++;
@@ -35,8 +42,14 @@ const useTypingEffect = (text: string, speed: number = 50) => {
 
 const Home = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
   const typedName = useTypingEffect(" Hello, I'm Kankati Mokshagna Anurag ", 100);
 
+=======
+  const typedName = useTypingEffect(" H Hello, I'm Kankati Mokshagna Anurag ", 100);
+
+  // Scroll animation for "animate-on-scroll" elements
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -105,8 +118,61 @@ const Home = () => {
     <div className="relative overflow-x-hidden">
       <ParticleBackground />
 
+<<<<<<< HEAD
       {/* Hero Section - 3D Robot Scene */}
       <Hero3D />
+=======
+      {/* Hero Section */}
+      <section className="relative hero-gradient min-h-[90vh] flex items-center">
+        <div className="container mx-auto px-4 py-20 md:py-32">
+          <div className="max-w-3xl mx-auto text-center space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary animate-gradient-x">
+                {typedName}
+              </span>
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Web Application Pentester | Robotics | Embedded Systems & IoT Developer | ROS2 & Sensor Fusion Specialist | AI/ML | Simulation Expert (Gazebo/RViz) 🚀
+            </p>
+            <div className="pt-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+              <Button asChild size="lg" className="font-medium">
+                <Link to="/projects">
+                  View Projects <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={scrollToAbout}
+                className="font-medium"
+              >
+                About My Expertise <ChevronRight size={16} className="ml-2" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Down Button */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <button
+            onClick={scrollToAbout}
+            className="p-2 rounded-full bg-background/50 backdrop-blur-sm border"
+            aria-label="Scroll down to expertise section"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-foreground"
+            >
+              <path d="M12 17L6 9H18L12 17Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </section>
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
 
       {/* Expertise Section */}
       <section ref={aboutRef} className="py-20 md:py-32 grid-pattern">
@@ -116,7 +182,11 @@ const Home = () => {
               My Technical Expertise
             </h2>
             <p className="text-lg text-muted-foreground">
+<<<<<<< HEAD
               I'm passionate about intelligent automation and cybersecurity, and I use a wide range of technologies to create secure, efficient, and innovative solutions that solve real-world problems.
+=======
+              Driven by a passion for intelligent automation and cybersecurity, I leverage a broad spectrum of technologies to build secure, efficient, and innovative solutions that address real-world challenges.
+>>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
             </p>
           </div>
 
