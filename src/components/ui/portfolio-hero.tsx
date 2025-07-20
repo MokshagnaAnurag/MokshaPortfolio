@@ -24,6 +24,8 @@ import {
   Bot,
 } from "lucide-react";
 import * as React from "react";
+import { SplineScene } from "@/components/ui/spline";
+import { Link as RouterLink } from "react-router-dom";
 
 // Utility function for classNames merging (uses cn but fallback)
 function cnUtil(...classes: (string | undefined | null | false)[]): string {
@@ -319,23 +321,32 @@ function FloatingElement({
   );
 }
 
-// Simple typing effect hook (similar to previous home page implementation)
-function useTypingEffect(text: string, speed: number = 80) {
-  const [displayedText, setDisplayedText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    setDisplayedText("");
-    const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text.charAt(index));
-      index++;
-      if (index >= text.length) clearInterval(interval);
-    }, speed);
-
-    return () => clearInterval(interval);
-  }, [text, speed]);
-
-  return displayedText;
+// Sequential typing effect hook
+function useSequentialTypingEffect(lines: string[], speed: number = 60) {
+  const [displayed, setDisplayed] = React.useState<string[]>(lines.map(() => ""));
+  React.useEffect(() => {
+    let line = 0;
+    let char = 0;
+    setDisplayed(lines.map(() => ""));
+    function typeNext() {
+      setDisplayed((prev) => {
+        const updated = [...prev];
+        updated[line] = lines[line].slice(0, char + 1);
+        return updated;
+      });
+      char++;
+      if (char < lines[line].length) {
+        setTimeout(typeNext, speed);
+      } else if (line < lines.length - 1) {
+        line++;
+        char = 0;
+        setTimeout(typeNext, speed * 2);
+      }
+    }
+    typeNext();
+    // eslint-disable-next-line
+  }, [lines.join("|"), speed]);
+  return displayed;
 }
 
 // Main Portfolio Hero Component
@@ -356,7 +367,7 @@ interface PortfolioHeroProps {
 }
 
 export function PortfolioHero({
-  name = "Mokshagna Anurag Kankati",
+  name: nameProp = "Mokshagna Anurag Kankati",
   title = "",
   description =
     "Building Smarter Systems — From Securing Web Apps to Powering Autonomous Robots with AI & Sensor Fusion ",
@@ -374,8 +385,20 @@ export function PortfolioHero({
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Typing effect for the name
-  const typedName = useTypingEffect(name, 90);
+  // Sequential typing effect for greeting and name
+  const [greeting, name] = useSequentialTypingEffect([
+    "Hi I'm",
+    nameProp
+  ], 60);
+  // Scroll to expertise section handler
+  const handleExpertiseClick = () => {
+    const expertise = document.getElementById('expertise');
+    if (expertise) {
+      expertise.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.hash = '#expertise';
+    }
+  };
 
   // Tech stack icons for the cloud
   const techIcons = [
@@ -440,168 +463,46 @@ export function PortfolioHero({
   ];
 
   return (
-    <section ref={ref} className="relative min-h-screen bg-background text-foreground overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,200,119,0.1),transparent_50%)]" />
-      </div>
-
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <FloatingElement delay={0.5} className="absolute top-20 left-10">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-sm border border-white/10" />
-        </FloatingElement>
-        <FloatingElement delay={1} className="absolute top-40 right-20">
-          <div className="w-16 h-16 rotate-45 bg-gradient-to-r from-green-400/20 to-blue-400/20 backdrop-blur-sm border border-white/10" />
-        </FloatingElement>
-        <FloatingElement delay={1.5} className="absolute bottom-40 left-20">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-400/20 to-pink-400/20 backdrop-blur-sm border border-white/10" />
-        </FloatingElement>
-        <FloatingElement delay={2} className="absolute bottom-20 right-10">
-          <div className="w-24 h-24 rotate-12 bg-gradient-to-r from-yellow-400/20 to-red-400/20 backdrop-blur-sm border border-white/10 rounded-lg" />
-        </FloatingElement>
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Hi, I'm{" "}
-                <GradientText colors={["#3b82f6", "#8b5cf6", "#06b6d4"]} className="inline-block">
-                  {typedName}
-                </GradientText>
-              </h1>
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-2xl lg:text-3xl text-muted-foreground font-medium"
-            >
-              {title}
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg text-muted-foreground leading-relaxed max-w-2xl"
-            >
-              {description}
-            </motion.p>
-
-            {/* Domain Tags */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-wrap gap-3"
-            >
-              {domains.map((domain, index) => (
-                <motion.div
-                  key={domain.title}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                  className="group flex items-center gap-2 px-4 py-2 rounded-full bg-muted/30 border border-border/30 hover:bg-muted/50 hover:border-border/50 transition-all duration-300"
-                >
-                  <domain.icon className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium">{domain.title}</span>
-                </motion.div>
-              ))}
-            </motion.div>
+    <section className="relative min-h-[500px] flex flex-col justify-center overflow-hidden bg-white dark:bg-black">
+      {/* Experience-style background */}
+      <div className="absolute inset-0 opacity-20 dark:opacity-10"
+        style={{
+          backgroundImage: `radial-gradient(circle at 25px 25px, hsl(var(--muted)) 2px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }}
+      />
+      {/* Main content: two-column layout */}
+      <div className="relative z-10 flex flex-col items-center justify-center py-16 w-full max-w-6xl mx-auto px-4 gap-8">
+        {/* Name, subtitle, buttons */}
+        <div className="flex-1 flex flex-col items-start justify-center max-w-2xl break-words">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-2 text-left min-h-[40px]">
+            <span className="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+              {greeting}
+            </span>
+            <span className="animate-pulse text-violet-400">|</span>
+          </h1>
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-4 text-left min-h-[60px]">
+            <span className="bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 bg-clip-text text-transparent">
+              {name}
+            </span>
+            <span className="animate-pulse text-fuchsia-400">|</span>
+          </h2>
+          {title && <div className="text-2xl font-semibold mb-2 text-foreground text-left">{title}</div>}
+          <p className="text-lg text-muted-foreground max-w-2xl text-left mb-8">
+            {description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-start mt-4">
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg sm:rounded-xl font-semibold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 border-none">
+              <RouterLink to="/projects">
+                View Projects <ExternalLink className="w-4 h-4 ml-2" />
+              </RouterLink>
+            </Button>
+            <Button size="lg" className="border border-neutral-700 text-white bg-black rounded-lg sm:rounded-xl font-semibold shadow-lg transition-all duration-300 hover:scale-105 active:scale-95" onClick={handleExpertiseClick}>
+              About My Expertise <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
           </div>
-
-          {/* Right Content - Tech Stack Cloud */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="relative"
-          >
-            <div className="relative w-full max-w-lg mx-auto">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-green-400/20 rounded-full blur-3xl" />
-
-              {/* Icon Cloud */}
-              <div className="relative z-10 bg-background/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
-                <IconCloud iconSlugs={techIcons} />
-              </div>
-            </div>
-
-            {/* Floating tech badges */}
-            <FloatingElement delay={2} className="absolute -top-4 -left-4">
-              <div className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-xs font-medium text-blue-300">
-                IoT
-              </div>
-            </FloatingElement>
-
-            <FloatingElement delay={2.5} className="absolute -top-4 -right-4">
-              <div className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-xs font-medium text-green-300">
-                AI/ML
-              </div>
-            </FloatingElement>
-
-            <FloatingElement delay={3} className="absolute -bottom-4 -left-4">
-              <div className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-medium text-purple-300">
-                Robotics
-              </div>
-            </FloatingElement>
-
-            <FloatingElement delay={3.5} className="absolute -bottom-4 -right-4">
-              <div className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-xs font-medium text-red-300">
-                Security
-              </div>
-            </FloatingElement>
-          </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-3 bg-muted-foreground/50 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
-
-      <style>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        .animate-gradient {
-          animation: gradient 8s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }

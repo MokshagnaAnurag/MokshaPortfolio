@@ -22,8 +22,4 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     include: ['react-chatbot-kit']
   }
-<<<<<<< HEAD
 }));
-=======
-}));
->>>>>>> 9f0c42e (Update portfolio: new navbar, about, and experience sections)
